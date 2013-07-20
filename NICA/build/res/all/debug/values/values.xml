@@ -10,8 +10,11 @@
     </declare-styleable>
     <!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/strings.xml -->
     <string name="app_name">NICA</string>
-    <string name="dummy_button">Cancel</string>
+    <string name="dummy_button">Retry</string>
     <string name="dummy_content">Connecting to Server...</string>
+    <string name="getphonenumber_button">Confirm</string>
+    <string name="getphoto_button">Upload</string>
+    <string name="getphoto_button2">Cancel</string>
     <!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

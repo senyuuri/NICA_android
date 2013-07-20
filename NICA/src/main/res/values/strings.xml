@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">NICA</string>
-    <string name="dummy_button">Cancel</string>
+    <string name="dummy_button">Retry</string>
     <string name="dummy_content">Connecting to Server...</string>
+    <string name="getphonenumber_button">Confirm</string>
+    <string name="getphoto_button">Upload</string>
+    <string name="getphoto_button2">Cancel</string>
 
 </resources>

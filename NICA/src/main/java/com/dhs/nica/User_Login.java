@@ -82,6 +82,8 @@ public class User_Login extends Activity {
 
     String phoneNumber = new String();
 
+    private int REQUEST_CODE = 1;
+
 
     //Handler dealing with user verification result
     android.os.Handler h = new android.os.Handler(){
@@ -102,19 +104,26 @@ public class User_Login extends Activity {
                 case 2:
 
                     Log.d(TAG, "Result:"+"yn");
-                    Intent intent2 = new Intent(getApplicationContext(),)
+                    Intent intent2 = new Intent(getApplicationContext(), User_GetPhoto.class);
+                    startActivity(intent2);
                     break;
 
                 // "n" Number not registrated
                 case 3:
+                    //do somthing here to show error
+                    Log.e(TAG,"Handler: 'n' value returned");
                     break;
 
                 // Invalid return content
                 case 4:
+                    //do something here to show error
+                    Log.e(TAG,"Handler: Invalid return content");
                     break;
 
                 // Exception Handling
                 case 5:
+                    Log.e(TAG,"Exception happened.");
+                    //do something here to show error
                     break;
             }
         }
@@ -268,10 +277,24 @@ public class User_Login extends Activity {
         }else{
             //Failed, open User_GetPhoto activity to get user input
             Intent i = new Intent(this, User_GetPhoneNumber.class);
-
+            startActivityForResult(i,REQUEST_CODE);
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
+            if (data.hasExtra("returnNumber")) {
+                phoneNumber = data.getExtras().getString("returnNumber");
+                new Thread(runnable).start();
+            }
+        }
+    }
+
+    //To-do: activate button only if connection failed
+    private void retry(View view){
+        login();
+    }
 
     private String loadPhoneStatus(){
         TelephonyManager phoneMgr=(TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);

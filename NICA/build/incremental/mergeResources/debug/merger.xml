@@ -49,27 +49,22 @@
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="getphoto_button2" >Cancel
+                </string>
                 <string name="app_name" >NICA
                 </string>
                 <string name="dummy_content" >Connecting to Server...
                 </string>
-                <string name="dummy_button" >Cancel
+                <string name="dummy_button" >Retry
+                </string>
+                <string name="getphonenumber_button" >Confirm
+                </string>
+                <string name="getphoto_button" >Upload
                 </string>
             </file>
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml"
                 qualifiers="" >
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Light" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
-                </style>
 
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
@@ -87,6 +82,17 @@
                     <item name="android:background">
 @android:drawable/bottom_bar
                     </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
                 </style>
 
                 <style
@@ -165,6 +171,16 @@ true
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="user_getphonenumber"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphonenumber.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="user_getphoto"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphoto.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/build/res/rs/debug" />
     </dataSet>
