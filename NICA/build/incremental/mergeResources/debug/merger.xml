@@ -49,7 +49,7 @@
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="getphoto_button2" >Cancel
+                <string name="getphoto_button2" >Take my profile photo
                 </string>
                 <string name="app_name" >NICA
                 </string>
@@ -181,6 +181,20 @@ true
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphoto.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/ids.xml"
+                qualifiers="" >
+                <item
+                    name="getphoto_button2"
+                    type="id">
+getphoto_button2
+                </item>
+                <item
+                    name="getphoto_button"
+                    type="id">
+getphoto_button
+                </item>
+            </file>
         </source>
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/build/res/rs/debug" />
     </dataSet>

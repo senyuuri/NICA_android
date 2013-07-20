@@ -25,12 +25,15 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import org.apache.http.util.EncodingUtils;
 
 import com.dhs.nica.Constant;
 
@@ -81,6 +84,8 @@ public class User_Login extends Activity {
     private String lineStr;
 
     String phoneNumber = new String();
+
+    String FileName = "PN";
 
     private int REQUEST_CODE = 1;
 
@@ -159,21 +164,27 @@ public class User_Login extends Activity {
                 in.close();
 
                 //Check response status
-
-                if(lineStr == "yy"){
+                msg = h.obtainMessage();
+                if(lineStr.equals("yy") ){
                     msg.what = 1;
-                } else if(lineStr == "yn"){
+                    Log.d(TAG,"msg.what:1");
+
+                } else if(lineStr.equals("yn")){
                     msg.what = 2;
+                    Log.d(TAG,"msg.what:2");
                 }
-                else if(lineStr == "n"){
+                else if(lineStr.equals("n")){
                     msg.what = 3;
+                    Log.d(TAG,"msg.what:3");
                 }
                 else{
                     msg.what = 4;
+                    Log.d(TAG,"msg.what:4");
                 }
                 h.sendMessage(msg);
 
             }catch (Exception e){Log.d(TAG,"Expection:"+ e.toString());
+                msg = h.obtainMessage();
                 msg.what = 5;
                 h.sendMessage(msg);}
             finally{
@@ -183,6 +194,7 @@ public class User_Login extends Activity {
                     } catch (IOException e) {
                         Log.d(TAG,"Expection:"+ e.toString());
                         e.printStackTrace();
+                        msg = h.obtainMessage();
                         msg.what = 5;
                         h.sendMessage(msg);}
                 }
@@ -269,9 +281,16 @@ public class User_Login extends Activity {
     private void login(){
 
         String PN = loadPhoneStatus();
-        if(PN!="N"){
+        String PN_local = readFileData(FileName);
+        if(PN_local.length()== 8){
+            //Read number from local cache if exist
+            phoneNumber = PN_local;
+            new Thread(runnable).start();
+        }
+        else if(PN!="N"){
             //Get phone number successfully, check with server
             //Start a new thread from runnable
+            writeFileData(FileName,phoneNumber);
             new Thread(runnable).start();
 
         }else{
@@ -285,15 +304,26 @@ public class User_Login extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
             if (data.hasExtra("returnNumber")) {
+
                 phoneNumber = data.getExtras().getString("returnNumber");
+                writeFileData(FileName,phoneNumber);
                 new Thread(runnable).start();
             }
         }
     }
 
     //To-do: activate button only if connection failed
-    private void retry(View view){
+    public void retry(View view){
         login();
+    }
+
+    public static boolean isNumeric(String str){
+        for (int i = str.length();--i>=0;){
+            if (!Character.isDigit(str.charAt(i))){
+                return false;
+            }
+        }
+        return true;
     }
 
     private String loadPhoneStatus(){
@@ -301,11 +331,15 @@ public class User_Login extends Activity {
         phoneNumber = phoneMgr.getLine1Number();
 
         //Verify validity of phone number
+
+        /* !regex slow performance
+
         Pattern pattern = Pattern.compile("^[0-9]{8}");
         Matcher matcher = pattern.matcher(phoneNumber);
         Boolean result = matcher.matches();
+        */
 
-        if(phoneNumber!= null && result){
+        if(phoneNumber!= null && isNumeric(phoneNumber) && phoneNumber.length() == 8){
             //Obtain phone number
             Log.d(TAG, "Phone Number:" + "Success. "+ phoneMgr.getLine1Number());
             Log.d(TAG,"SIM status:"+phoneMgr.getSimState());
@@ -360,4 +394,35 @@ public class User_Login extends Activity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
+
+    public void writeFileData(String filename, String message){
+        try {
+            FileOutputStream fout = openFileOutput(filename, MODE_PRIVATE);
+            byte[]  bytes = message.getBytes();
+            fout.write(bytes);//
+            fout.close();//
+            Log.d(TAG,"File " + filename+" : " + message);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "I/O error" + e);
+        }
+    }
+
+    public String readFileData(String fileName){
+        String result="";
+        try {
+            FileInputStream fin = openFileInput(fileName);
+            int lenght = fin.available();
+            byte[] buffer = new byte[lenght];
+            fin.read(buffer);
+            result = EncodingUtils.getString(buffer, "UTF-8");
+            Log.d(TAG, "File " + fileName + " : " + result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG,"I/O error" + e);
+        }
+        return result;
+    }
+
 }

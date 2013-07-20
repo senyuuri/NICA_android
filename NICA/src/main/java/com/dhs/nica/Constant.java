@@ -1,5 +1,12 @@
 package com.dhs.nica;
 
+import android.util.Log;
+
+import org.apache.http.util.EncodingUtils;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 /**
  * Created by natsuyuu on 13-7-20.
  */
@@ -11,4 +18,7 @@ public class Constant {
     public static final String SERVER_INVITE = "http://metallica-nica.appspot.com/invite" ;
     public static final String SERVER_INVITE_RESPONSE = "http://metallica-nica.appspot.com/inviteresponse" ;
 
+
 }
+
+

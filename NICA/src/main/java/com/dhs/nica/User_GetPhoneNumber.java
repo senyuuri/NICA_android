@@ -2,6 +2,7 @@ package com.dhs.nica;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.view.View;
@@ -24,21 +25,30 @@ public class User_GetPhoneNumber extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_getphonenumber);
         editText = (EditText) findViewById(R.id.editText);
+        editText.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
     }
 
-    public void onclick(View view){
+    public void confirm(View view){
         finish();
     }
+
+    public static boolean isNumeric(String str){
+        for (int i = str.length();--i>=0;){
+            if (!Character.isDigit(str.charAt(i))){
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 
     @Override
     public void finish() {
-        Pattern pattern = Pattern.compile("^[0-9]{8}");
-        String pn = String.valueOf(editText.getText());
-        Matcher matcher = pattern.matcher(pn);
-        Boolean result = matcher.matches();
 
-        if(result){
+        String pn = String.valueOf(editText.getText());
+
+        if(isNumeric(pn)&& pn.length() == 8){
             Log.d(TAG,"RE: Good result "+ pn);
             Intent data = new Intent();
             data.putExtra("returnNumber", pn);
