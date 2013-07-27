@@ -17,6 +17,7 @@
         <activity android:label="User_GetPhoto" android:name="com.dhs.nica.User_GetPhoto"/>
 
         <activity android:label="Main" android:name="com.dhs.nica.Main"/>
+        <activity android:label="Main_PhoneCall" android:name="com.dhs.nica.Main_PhoneCall"/>
 
     </application>
 

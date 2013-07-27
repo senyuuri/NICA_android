@@ -37,6 +37,9 @@
         <activity
                 android:name="com.dhs.nica.Main"
                 android:label="Main"></activity>
+        <activity
+                android:name="com.dhs.nica.Main_PhoneCall"
+                android:label="Main_PhoneCall"></activity>
 
     </application>
 

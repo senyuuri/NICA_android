@@ -7,6 +7,7 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
@@ -16,8 +17,11 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EncodingUtils;
+import org.apache.http.util.EntityUtils;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -30,12 +34,13 @@ import java.util.List;
 public class Main extends Activity {
     static final String TAG = "dhs_nica";
     private String lineStr;
+    static final String filename = "PN";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        int a = 1;
+        new Thread(runnable).start();
     }
 
 
@@ -67,21 +72,41 @@ public class Main extends Activity {
             BufferedReader in = null;
             try{
                 HttpClient client = new DefaultHttpClient();
-                HttpGet request = new HttpGet(Constant.SERVER_CIRCLE_INFO);
+                String urlnew = (String) Constant.SERVER_CIRCLE_INFO+"?pn="+readFileData(filename);
+                Log.d(TAG,urlnew);
+                HttpGet request = new HttpGet(urlnew);
                 HttpResponse response = client.execute(request);
                 if(response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){
+                    HttpEntity resEntity = response.getEntity();
+                    lineStr = EntityUtils.toString(resEntity);
+                }
+                /**OldVersion - OutOfMemoryError
+
                     Log.d(TAG, "Circle response downloaded.");
                     in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-                }
-                StringBuffer string = new StringBuffer("");
-                lineStr = "";
-                while ((lineStr = in.readLine()) != null) {
-                    string.append(lineStr + "\n");
+                    StringBuffer buffer = new StringBuffer();
+                    String line = "";
+                    while((line = in.readLine())!= null){
+                        buffer.append(line);
+                    }
+                    lineStr = buffer.toString();
+                    in.close();
+
+                /**
+                Log.d(TAG, "Circle response downloaded.");
+                in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+                StringBuffer buffer = new StringBuffer();
+                String line = "";
+                while((line = in.readLine())!= null){
+                    lineStr = lineStr + line;
                 }
                 in.close();
+            }**/
+
+
 
                 msg.what = 1;
-                Log.d(TAG, "msg.what:1，raw Json: " + lineStr);
+                Log.d(TAG, "msg.what:1  length: " +lineStr.length()+ " raw Json: " + lineStr);
 
                 h.sendMessage(msg);
 
@@ -99,4 +124,20 @@ public class Main extends Activity {
             }
         }
     };
+
+    public String readFileData(String fileName){
+        String result="";
+        try {
+            FileInputStream fin = openFileInput(fileName);
+            int lenght = fin.available();
+            byte[] buffer = new byte[lenght];
+            fin.read(buffer);
+            result = EncodingUtils.getString(buffer, "UTF-8");
+            Log.d(TAG, fileName + " : " + result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG,"I/O error" + e);
+        }
+        return result;
+    }
 }

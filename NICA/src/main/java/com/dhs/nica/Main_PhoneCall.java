@@ -33,10 +33,12 @@ public class Main_PhoneCall extends Activity{
         JSONString = extras.getString("JSONString");
     }
 
-    private static List<Map<String, Object>> parseJson(String jsonString){
+    private static ArrayList<HashMap<String, Object>> parseJson(String jsonString){
+        ArrayList<HashMap<String,Object>> list = new ArrayList<HashMap<String,Object>>();
         try{
             JSONArray jsonArray = new JSONObject(jsonString).getJSONArray("user_info");
             JSONObject jsonObject;
+
             for(int i  = 0; i < jsonArray.length(); i++){
 
             }
@@ -45,6 +47,7 @@ public class Main_PhoneCall extends Activity{
         }catch(Exception e){
             Log.e(TAG,e.toString());
         }
+        return list;
     }
-    return list;
+
 }

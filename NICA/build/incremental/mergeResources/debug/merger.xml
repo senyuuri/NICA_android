@@ -55,9 +55,9 @@
                 </string>
                 <string name="dummy_content" >Connecting to Server...
                 </string>
-                <string name="getphonenumber_button" >Confirm
-                </string>
                 <string name="dummy_button" >Retry
+                </string>
+                <string name="getphonenumber_button" >Confirm
                 </string>
                 <string name="getphoto_button" >Upload
                 </string>
@@ -65,17 +65,6 @@
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml"
                 qualifiers="" >
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Light" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
-                </style>
 
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
@@ -93,6 +82,17 @@
                     <item name="android:background">
 @android:drawable/bottom_bar
                     </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
                 </style>
 
                 <style
@@ -185,14 +185,14 @@ true
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/ids.xml"
                 qualifiers="" >
                 <item
-                    name="getphoto_button"
-                    type="id">
-getphoto_button
-                </item>
-                <item
                     name="getphoto_button2"
                     type="id">
 getphoto_button2
+                </item>
+                <item
+                    name="getphoto_button"
+                    type="id">
+getphoto_button
                 </item>
             </file>
             <file
@@ -208,6 +208,11 @@ getphoto_button2
             <file
                 name="50x50"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/50x50.gif"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="placehold50"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/placehold50.gif"
                 qualifiers="hdpi"
                 type="drawable" />
         </source>
