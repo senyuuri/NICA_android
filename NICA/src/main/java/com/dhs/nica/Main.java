@@ -22,6 +22,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -35,6 +36,7 @@ public class Main extends Activity {
     static final String TAG = "dhs_nica";
     private String lineStr;
     static final String filename = "PN";
+    static final String filename2 = "JsonCircle";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,7 @@ public class Main extends Activity {
                 //"yy" Valid number and valid avatar
                 case 1:
                 Intent i = new Intent(getApplicationContext(), Main_PhoneCall.class);
-                i.putExtra("JSON_String",lineStr);
+                writeFileData(filename2,lineStr);
                 startActivity(i);
                 break;
             }
@@ -139,5 +141,18 @@ public class Main extends Activity {
             Log.e(TAG,"I/O error" + e);
         }
         return result;
+    }
+
+    public void writeFileData(String filename, String message){
+        try {
+            FileOutputStream fout = openFileOutput(filename, MODE_PRIVATE);
+            byte[]  bytes = message.getBytes();
+            fout.write(bytes);//
+            fout.close();//
+            Log.d(TAG,"File " + filename+" : " + message);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "I/O error" + e);
+        }
     }
 }
