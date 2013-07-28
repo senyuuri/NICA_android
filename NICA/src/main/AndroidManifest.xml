@@ -40,6 +40,15 @@
         <activity
                 android:name="com.dhs.nica.Main_PhoneCall"
                 android:label="Main_PhoneCall"></activity>
+        <activity
+                android:name="com.dhs.nica.Main_PhotoUpload"
+                android:label="Main_PhotoUpload"></activity>
+        <activity
+                android:name="com.dhs.nica.Main_PhotoUpload_new"
+                android:label="Main_PhotoUpload_new"></activity>
+        <service
+                android:name="DownloadService">
+                </service>
 
     </application>
 

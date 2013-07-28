@@ -18,6 +18,9 @@
 
         <activity android:label="Main" android:name="com.dhs.nica.Main"/>
         <activity android:label="Main_PhoneCall" android:name="com.dhs.nica.Main_PhoneCall"/>
+        <activity android:label="Main_PhotoUpload" android:name="com.dhs.nica.Main_PhotoUpload"/>
+        <service android:name="com.dhs.nica.DownloadService">
+                </service>
 
     </application>
 

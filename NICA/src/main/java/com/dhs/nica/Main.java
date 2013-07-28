@@ -2,9 +2,14 @@ package com.dhs.nica;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Message;
+import android.os.Messenger;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -21,6 +26,7 @@ import org.apache.http.util.EncodingUtils;
 import org.apache.http.util.EntityUtils;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -37,15 +43,55 @@ public class Main extends Activity {
     private String lineStr;
     static final String filename = "PN";
     static final String filename2 = "JsonCircle";
+    private Button button1,button2;
+    private File cache;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        new Thread(runnable).start();
+        button1 = (Button) findViewById(R.id.main_uploadbutton);
+        button2 = (Button) findViewById(R.id.main_photocancel);
+        //new Thread(runnable).start();
+
+        /*Create new cache folder
+        cache = new File(Environment.getExternalStorageDirectory(), "cache");
+
+        if(!cache.exists()){
+            cache.mkdirs();
+        }*/
+
+        DownloadService ds = new DownloadService();
+        String phonenumber = readFileData(filename);
+        String rawcontact = ds.circleupdate(phonenumber);
+        writeFileData(filename2,rawcontact);
     }
 
 
+
+    public void call(View view){
+        Intent icall = new Intent(getApplicationContext(),Main_PhoneCall.class);
+        startActivity(icall);
+
+    }
+
+    public void photoupload(View view){
+        Intent iphoto = new Intent(getApplicationContext(),Main_PhotoUpload_new.class);
+        startActivity(iphoto);
+
+    }
+
+    /**
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //Delete cache when exit
+        File[] files = cache.listFiles();
+        for(File file :files){
+            file.delete();
+        }
+        cache.delete();
+    }
     android.os.Handler h = new android.os.Handler(){
         public void handleMessage (Message msg)
         {
@@ -63,70 +109,17 @@ public class Main extends Activity {
 
 
 
-    /*
-    Update contact from circle
-     */
-    private Message msg = new Message();
+
+
+
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
-
-            BufferedReader in = null;
-            try{
-                HttpClient client = new DefaultHttpClient();
-                String urlnew = (String) Constant.SERVER_CIRCLE_INFO+"?pn="+readFileData(filename);
-                Log.d(TAG,urlnew);
-                HttpGet request = new HttpGet(urlnew);
-                HttpResponse response = client.execute(request);
-                if(response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){
-                    HttpEntity resEntity = response.getEntity();
-                    lineStr = EntityUtils.toString(resEntity);
-                }
-                /**OldVersion - OutOfMemoryError
-
-                    Log.d(TAG, "Circle response downloaded.");
-                    in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-                    StringBuffer buffer = new StringBuffer();
-                    String line = "";
-                    while((line = in.readLine())!= null){
-                        buffer.append(line);
-                    }
-                    lineStr = buffer.toString();
-                    in.close();
-
-                /**
-                Log.d(TAG, "Circle response downloaded.");
-                in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-                StringBuffer buffer = new StringBuffer();
-                String line = "";
-                while((line = in.readLine())!= null){
-                    lineStr = lineStr + line;
-                }
-                in.close();
-            }**/
-
-
-
-                msg.what = 1;
-                Log.d(TAG, "msg.what:1  length: " +lineStr.length()+ " raw Json: " + lineStr);
-
-                h.sendMessage(msg);
-
-            }catch (Exception e){Log.d(TAG,"Expection:"+ e.toString());
-              }
-            finally{
-                if (in != null) {
-                    try {
-                        in.close();
-                    } catch (IOException e) {
-                        Log.d(TAG,"Expection:"+ e.toString());
-                        e.printStackTrace();
-                      }
-                }
-            }
         }
     };
 
+
+     **/
     public String readFileData(String fileName){
         String result="";
         try {
@@ -155,4 +148,5 @@ public class Main extends Activity {
             Log.e(TAG, "I/O error" + e);
         }
     }
+
 }

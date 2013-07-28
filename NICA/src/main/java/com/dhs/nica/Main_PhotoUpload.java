@@ -3,7 +3,6 @@ package com.dhs.nica;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.Base64;
@@ -25,19 +24,16 @@ import org.apache.http.util.EncodingUtils;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
- * Created by natsuyuu on 13-7-20.
+ * Created by natsuyuu on 13-7-28.
  */
-public class User_GetPhoto extends Activity {
+public class Main_PhotoUpload extends Activity{
     private static final int REQUEST_CODE = 1;
     private Bitmap bitmap;
     private ImageView imageView;
@@ -54,17 +50,15 @@ public class User_GetPhoto extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_getphoto);
-        button2 = (Button) findViewById(R.id.getphoto_button2);
+        setContentView(R.layout.main_photoupload);
+        button2 = (Button) findViewById(R.id.main_uploadbutton);
         button2.setEnabled(false);
-
-    }
-
-    public void onclick(View view){
-        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView = (ImageView) findViewById(R.id.main_imageview);
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
         startActivityForResult(intent, REQUEST_CODE);
+
     }
+
 
 
     public void upload(View view){
@@ -81,7 +75,7 @@ public class User_GetPhoto extends Activity {
                 case 1:
                     Intent intent = new Intent(getApplicationContext(), Main.class);
                     startActivity(intent);
-                    Toast toast = Toast.makeText(getApplicationContext(),"Avatar upload successed",Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(),"Image upload successed",Toast.LENGTH_LONG);
                     toast.show();
                     break;
 
@@ -90,12 +84,8 @@ public class User_GetPhoto extends Activity {
 
                     break;
 
-                // Exception encountered
-                case 3:
-                    //do somthing here to show error
-                    break;
 
-              }
+            }
         }
     };
 
@@ -107,15 +97,15 @@ public class User_GetPhoto extends Activity {
             BufferedReader in = null;
             try{
                 HttpClient client = new DefaultHttpClient();
-                HttpPost request = new HttpPost(Constant.SERVER_AVATAR_UPLOAD);
+                HttpPost request = new HttpPost(Constant.SERVER_IMAGE_UPLOAD);
                 List<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 
                 String phoneNumber = readFileData(FileName);
-                String base64_encode = bitmap_to_base64();
+                String base64_encoded = bitmap_to_base64();
                 //Add parameter to POST
-                postParameters.add(new BasicNameValuePair("phonenum", phoneNumber));
-                postParameters.add(new BasicNameValuePair("avatar",base64_encode));
-                Log.d(TAG, "Avatar parameter added"+base64_encode);
+                postParameters.add(new BasicNameValuePair("pn", phoneNumber));
+                postParameters.add(new BasicNameValuePair("imgdata",base64_encoded));
+                Log.d(TAG, "ImgUpload: Image parameter added" + base64_encoded);
 
                 UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(
                         postParameters);
@@ -125,7 +115,7 @@ public class User_GetPhoto extends Activity {
                         new InputStreamReader(
                                 response.getEntity().getContent()));
                 lineStr = in.readLine();
-                Log.d(TAG, "Avatarupload LineStr:" + lineStr);
+                Log.d(TAG, "Imageupload LineStr:" + lineStr);
                 in.close();
 
                 //Check response status
@@ -157,55 +147,40 @@ public class User_GetPhoto extends Activity {
 
     public String bitmap_to_base64(){
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG,90,out);
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,out);
         byte[] outbyte = out.toByteArray();
         String outbyte1 = Base64.encodeToString(outbyte, Base64.DEFAULT);
         return outbyte1;
     }
 
 
-     @Override
-      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-         InputStream stream = null;
-         if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK)
-             try {
-                 // Recyle unused bitmaps
-                 if (bitmap != null) {
-                     bitmap.recycle();
-                 }
-                 //stream = getContentResolver().openInputStream(data.getData());
-                 Bundle extras = data.getExtras();
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        InputStream stream = null;
+        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK)
+            try {
+                // Recyle unused bitmaps
+                if (bitmap != null) {
+                    bitmap.recycle();
+                }
+                //stream = getContentResolver().openInputStream(data.getData());
+                Bundle extras = data.getExtras();
 
-                 bitmap = (Bitmap) extras.get("data");
+                bitmap = (Bitmap) extras.get("data");
 
-                 imageView.setImageBitmap(bitmap);
-                 button2.setEnabled(true);
-             } catch (Exception e) {
-                 e.printStackTrace();
-             } finally {
-                 if (stream != null)
-                     try {
-                         stream.close();
-                     } catch (IOException e) {
-                         e.printStackTrace();
-                     }
-             }
-     }
-
-
-    public void writeFileData(String filename, String message){
-        try {
-            FileOutputStream fout = openFileOutput(filename, MODE_PRIVATE);
-            byte[]  bytes = message.getBytes();
-            fout.write(bytes);//
-            fout.close();//
-            Log.d(TAG,filename+" : " + message);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.e(TAG, "I/O error" + e);
-        }
+                imageView.setImageBitmap(bitmap);
+                button2.setEnabled(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (stream != null)
+                    try {
+                        stream.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+            }
     }
-
     public String readFileData(String fileName){
         String result="";
         try {
@@ -221,7 +196,5 @@ public class User_GetPhoto extends Activity {
         }
         return result;
     }
+
 }
-
-
-
