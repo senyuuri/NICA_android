@@ -4,6 +4,12 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <dependency>
+        <groupId>com.nostra13.universalimageloader</groupId>
+        <artifactId>universal-image-loader</artifactId>
+        <version>1.8.5</version>
+    </dependency>
+
     <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
         <activity android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" android:name="com.dhs.nica.User_Login" android:theme="@style/FullscreenTheme">
             <intent-filter>
@@ -18,7 +24,7 @@
 
         <activity android:label="Main" android:name="com.dhs.nica.Main"/>
         <activity android:label="Main_PhoneCall" android:name="com.dhs.nica.Main_PhoneCall"/>
-        <activity android:label="Main_PhotoUpload" android:name="com.dhs.nica.Main_PhotoUpload"/>
+        <activity android:label="Main_PhotoUpload_new" android:name="com.dhs.nica.Main_PhotoUpload_new"/>
         <service android:name="com.dhs.nica.DownloadService">
                 </service>
 

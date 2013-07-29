@@ -9,6 +9,16 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="placehold200"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/placehold200.gif"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="placehold50"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/placehold50.gif"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi"
@@ -29,6 +39,46 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="item_pager_image"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/item_pager_image.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main_phonecall"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_phonecall.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main_phonecall_relative"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_phonecall_relative.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main_photoload_new"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_photoload_new.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main_photoupload"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_photoupload.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="user_getphonenumber"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphonenumber.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="user_getphoto"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphoto.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="ButtonBarContainerTheme" >
@@ -43,12 +93,64 @@
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/colors.xml"
                 qualifiers="" >
+                <color name="white" >#FFFFFF
+                </color>
                 <color name="black_overlay" >#66000000
                 </color>
             </file>
             <file
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/ids.xml"
+                qualifiers="" >
+                <item
+                    name="main_uploadbutton"
+                    type="id">
+uploadbutton
+                </item>
+                <item
+                    name="getphoto_button"
+                    type="id">
+getphoto_button
+                </item>
+                <item
+                    name="getphoto_button2"
+                    type="id">
+getphoto_button2
+                </item>
+                <item
+                    name="main_imageview"
+                    type="id">
+imageview
+                </item>
+                <item
+                    name="main_photocancel"
+                    type="id"/>
+                <item
+                    name="main_goto_phonecall"
+                    type="id"/>
+                <item
+                    name="listview_new"
+                    type="id">
+listview_new
+                </item>
+                <item
+                    name="main_goto_imgupload"
+                    type="id"/>
+                <item
+                    name="gridview"
+                    type="id">
+gridview
+                </item>
+                <item
+                    name="main_getphoto"
+                    type="id">
+getphoto
+                </item>
+            </file>
+            <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="descr_image" >descrimg
+                </string>
                 <string name="main_goto_phonecall" >Call
                 </string>
                 <string name="getphoto_button2" >Take my profile photo
@@ -57,13 +159,13 @@
                 </string>
                 <string name="dummy_content" >Connecting to Server...
                 </string>
-                <string name="main_photocancel" >Cancel
-                </string>
                 <string name="main_uploadbutton" >Upload
                 </string>
-                <string name="getphonenumber_button" >Confirm
+                <string name="main_photocancel" >Cancel
                 </string>
                 <string name="dummy_button" >Retry
+                </string>
+                <string name="getphonenumber_button" >Confirm
                 </string>
                 <string name="getphoto_button" >Upload
                 </string>
@@ -180,93 +282,25 @@ true
                 </style>
             </file>
             <file
-                name="user_getphonenumber"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphonenumber.xml"
+                name="ac_image_pager"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/ac_image_pager.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="user_getphoto"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphoto.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/ids.xml"
-                qualifiers="" >
-                <item
-                    name="main_uploadbutton"
-                    type="id">
-uploadbutton
-                </item>
-                <item
-                    name="getphoto_button"
-                    type="id">
-getphoto_button
-                </item>
-                <item
-                    name="getphoto_button2"
-                    type="id">
-getphoto_button2
-                </item>
-                <item
-                    name="main_photocancel"
-                    type="id"/>
-                <item
-                    name="main_imageview"
-                    type="id">
-imageview
-                </item>
-                <item
-                    name="main_goto_phonecall"
-                    type="id"/>
-                <item
-                    name="main_goto_imgupload"
-                    type="id"/>
-                <item
-                    name="gridview"
-                    type="id">
-gridview
-                </item>
-                <item
-                    name="main_getphoto"
-                    type="id">
-getphoto
-                </item>
-            </file>
-            <file
-                name="main_phonecall"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_phonecall.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="main"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="50x50"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/50x50.gif"
+                name="ic_empty"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_empty.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
-                name="placehold50"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/placehold50.gif"
+                name="ic_error"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_error.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
-                name="main_phonecall_relative"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_phonecall_relative.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="placehold200"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/placehold200.gif"
+                name="ic_stub"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_stub.png"
                 qualifiers="hdpi"
                 type="drawable" />
-            <file
-                name="main_photoupload"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_photoupload.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/build/res/rs/debug" />
     </dataSet>

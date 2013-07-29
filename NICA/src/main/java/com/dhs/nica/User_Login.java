@@ -5,6 +5,8 @@ import com.dhs.nica.util.SystemUiHider;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,6 +27,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -36,6 +39,15 @@ import java.util.regex.Matcher;
 import org.apache.http.util.EncodingUtils;
 
 import com.dhs.nica.Constant;
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
+import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
+import com.nostra13.universalimageloader.utils.StorageUtils;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -43,7 +55,7 @@ import com.dhs.nica.Constant;
  *
  * @see SystemUiHider
  */
-public class User_Login extends Activity {
+public class User_Login extends BaseActivity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -270,6 +282,16 @@ public class User_Login extends Activity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+        //test
+        Intent i = new Intent(this,Main.class);
+        startActivity(i);
+
+        Context context = getApplicationContext();
+        File cacheDir = StorageUtils.getCacheDirectory(context);
+        ImageLoaderConfiguration config  =
+                ImageLoaderConfiguration.createDefault(context);
+        ImageLoader.getInstance().init(config);
 
         //Main
         login();
