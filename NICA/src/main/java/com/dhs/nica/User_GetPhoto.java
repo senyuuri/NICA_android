@@ -79,7 +79,7 @@ public class User_GetPhoto extends Activity {
             {
                 //"y" Upload succeed
                 case 1:
-                    Intent intent = new Intent(getApplicationContext(), Main.class);
+                    Intent intent = new Intent(getApplicationContext(), PreMain.class);
                     startActivity(intent);
                     Toast toast = Toast.makeText(getApplicationContext(),"Avatar upload successed",Toast.LENGTH_LONG);
                     toast.show();

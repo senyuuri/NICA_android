@@ -110,7 +110,7 @@ public class User_Login extends BaseActivity {
             {
                 //"yy" Valid number and valid avatar
                 case 1:
-                    Intent intent = new Intent(getApplicationContext(), Main.class);
+                    Intent intent = new Intent(getApplicationContext(), PreMain.class);
                     startActivity(intent);
                     Log.d(TAG, "Result:"+"yy");
                     Toast toast = Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_LONG);
@@ -284,8 +284,8 @@ public class User_Login extends BaseActivity {
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
 
         //test
-        Intent i = new Intent(this,Main.class);
-        startActivity(i);
+        //Intent i = new Intent(this,Main.class);
+        //startActivity(i);
 
         Context context = getApplicationContext();
         File cacheDir = StorageUtils.getCacheDirectory(context);

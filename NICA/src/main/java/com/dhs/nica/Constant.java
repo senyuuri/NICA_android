@@ -19,6 +19,7 @@ public class Constant {
     public static final String SERVER_CIRCLE_CREATE = "http://metallica-nica.appspot.com/createcircle" ;
     public static final String SERVER_CIRCLE_INFO = "http://metallica-nica.appspot.com/circleinfo";
     public static final String SERVER_INVITE = "http://metallica-nica.appspot.com/invite" ;
+    public static final String SERVER_GET_IMAGE = "http://metallica-nica.appspot.com/getimage?imageid=";
     public static final String SERVER_INVITE_RESPONSE = "http://metallica-nica.appspot.com/inviteresponse" ;
 
     public static final String[] IMAGES = new String[] {

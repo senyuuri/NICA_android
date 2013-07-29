@@ -79,9 +79,9 @@ public class Main extends BaseActivity {
     private Button button1,button2;
     private File cache;
 
-    String[] imageUrls = new String[]{};
+    private String[] imageUrls = new String[100];
+    private String circleinfo;
 
-    private ProgressDialog progressDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -100,7 +100,9 @@ public class Main extends BaseActivity {
             cache.mkdirs();
         }*/
 
-
+        Bundle bundle = this.getIntent().getExtras();
+        imageUrls = bundle.getStringArray("imageurl");
+        circleinfo = bundle.getString("circleinfo");
 
 
         //String[] imageUrls = Constant.IMAGES;
@@ -127,7 +129,7 @@ public class Main extends BaseActivity {
         pager.setCurrentItem(pagerPosition);
 
 
-        progressDialog = ProgressDialog.show(Main.this, "Loading", "Please wait...", true, false);
+
         //DownloadService ds = new DownloadService();
         //String phonenumber = readFileData(filename);
         //String rawcontact = ds.circleupdate(phonenumber);
@@ -135,67 +137,16 @@ public class Main extends BaseActivity {
 
         //new Thread(runnable).start();
 
-        new Thread(){
-            @Override
-            public void run(){
-                BufferedReader in = null;
-                try{
-                    //Get circle contact info
-                    HttpClient client = new DefaultHttpClient();
-                    String urlnew = (String) Constant.SERVER_CIRCLE_INFO+"?pn="+readFileData(filename);
-                    Log.d(TAG,urlnew);
-                    HttpGet request = new HttpGet(urlnew);
-                    HttpResponse response = client.execute(request);
-                    if(response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){
-                        HttpEntity resEntity = response.getEntity();
-                        lineStr = EntityUtils.toString(resEntity);
-                    }
-                    Log.d(TAG, "Circlrinfo fetched: " +lineStr);
+
+        //adapter.notifyDataSetChanged();
+    }
 
 
-                    //get image url list
-                    HttpClient client2 = new DefaultHttpClient();
-                    String urlnew2 = (String) Constant.SERVER_IMAGE_LIST_GENERATE+"?pn="+readFileData(filename);
-                    Log.d(TAG,urlnew2);
-                    HttpGet request2 = new HttpGet(urlnew2);
-                    HttpResponse response2 = client2.execute(request2);
-                    if(response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){
-                        HttpEntity resEntity = response2.getEntity();
-                        lineStr2 = EntityUtils.toString(resEntity);
-                    }
-                    Log.d(TAG, "ImgList fetched: " +lineStr2);
-
-                    //Convert JsonArray to String[]
-                    JSONArray jsonArray = new JSONObject(lineStr2).getJSONArray("imglist");
-                    for(int i  = 0; i < jsonArray.length(); i++){
-
-                        JSONObject jsonObject2 = (JSONObject)jsonArray.opt(i);
-                        imageUrls[i] = jsonObject2.toString();
-                        Log.d(TAG,"Reading Json " +i +"  :"+imageUrls[i]);
-
-                    }
-                    adapter.notifyDataSetChanged();
-                    Message msg = new Message();
-                    msg.what = 1;
-                    h.sendMessage(msg);
-
-
-
-                }catch (Exception e){Log.d(TAG,"Expection:"+ e.toString());
-                }
-                finally{
-                    if (in != null) {
-                        try {
-                            in.close();
-                        } catch (IOException e) {
-                            Log.d(TAG,"Expection:"+ e.toString());
-                            e.printStackTrace();
-                        }
-                    }
-                }
-
-            }
-        }.start();
+    public static String JSONTokener(String in) { // consume an optional byte order mark (BOM) if it exists
+        if (in != null && in.startsWith("\ufeff")) {
+            in = in.substring(1);
+        }
+        return in;
     }
 
     /*
@@ -206,20 +157,6 @@ public class Main extends BaseActivity {
 
         }
     };*/
-
-    android.os.Handler h = new android.os.Handler(){
-        public void handleMessage (Message msg)
-        {
-            switch(msg.what)
-            {
-
-                case 1:
-                    progressDialog.dismiss();
-
-                    break;
-            }
-        }
-    };
 
 
     public void call(View view){
@@ -261,21 +198,7 @@ public class Main extends BaseActivity {
 
 
 
-    public String readFileData(String fileName){
-        String result="";
-        try {
-            FileInputStream fin = openFileInput(fileName);
-            int lenght = fin.available();
-            byte[] buffer = new byte[lenght];
-            fin.read(buffer);
-            result = EncodingUtils.getString(buffer, "UTF-8");
-            Log.d(TAG, fileName + " : " + result);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.e(TAG,"I/O error" + e);
-        }
-        return result;
-    }
+
 
     public void writeFileData(String filename, String message){
         try {
@@ -320,6 +243,7 @@ public class Main extends BaseActivity {
         public void destroyItem(ViewGroup container, int position, Object object) {
             ((ViewPager) container).removeView((View) object);
         }
+
 
         @Override
         public void finishUpdate(View container) {

@@ -52,6 +52,9 @@
         <service
                 android:name="DownloadService">
                 </service>
+        <activity
+                android:name="com.dhs.nica.PreMain"
+                android:label="PreMain"></activity>
 
     </application>
 

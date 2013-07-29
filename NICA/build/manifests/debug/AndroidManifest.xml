@@ -27,6 +27,7 @@
         <activity android:label="Main_PhotoUpload_new" android:name="com.dhs.nica.Main_PhotoUpload_new"/>
         <service android:name="com.dhs.nica.DownloadService">
                 </service>
+        <activity android:label="PreMain" android:name="com.dhs.nica.PreMain"/>
 
     </application>
 
