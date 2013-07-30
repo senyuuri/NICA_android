@@ -33,11 +33,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int placehold50=0x7f020005;
     }
     public static final class id {
-        public static final int ItemImage=0x7f050010;
-        public static final int ItemText=0x7f050011;
-        public static final int button=0x7f050013;
+        public static final int ItemImage=0x7f050011;
+        public static final int ItemText=0x7f050012;
+        public static final int button=0x7f050015;
         public static final int dummy_button=0x7f05000d;
-        public static final int editText=0x7f050012;
+        public static final int editText=0x7f050014;
         public static final int fullscreen_content=0x7f05000b;
         public static final int fullscreen_content_controls=0x7f05000c;
         /**  From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/ids.xml 
@@ -46,9 +46,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int getphoto_button2=0x7f050001;
         public static final int gridview=0x7f050002;
         public static final int image=0x7f05000e;
-        public static final int imageView=0x7f050014;
+        public static final int imageView=0x7f050013;
         public static final int listview_new=0x7f050003;
-        public static final int loading=0x7f05000f;
+        public static final int loading=0x7f050010;
         public static final int main_getphoto=0x7f050004;
         public static final int main_goto_imgupload=0x7f050005;
         public static final int main_goto_phonecall=0x7f050006;
@@ -56,18 +56,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int main_photocancel=0x7f050008;
         public static final int main_uploadbutton=0x7f050009;
         public static final int pager=0x7f05000a;
+        public static final int text=0x7f05000f;
     }
     public static final class layout {
-        public static final int ac_image_pager=0x7f030000;
-        public static final int activity_login=0x7f030001;
-        public static final int item_pager_image=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int main_phonecall=0x7f030004;
-        public static final int main_phonecall_relative=0x7f030005;
-        public static final int main_photoload_new=0x7f030006;
-        public static final int main_photoupload=0x7f030007;
-        public static final int user_getphonenumber=0x7f030008;
-        public static final int user_getphoto=0x7f030009;
+        public static final int ac_image_list=0x7f030000;
+        public static final int ac_image_pager=0x7f030001;
+        public static final int activity_login=0x7f030002;
+        public static final int item_list_image=0x7f030003;
+        public static final int item_pager_image=0x7f030004;
+        public static final int main=0x7f030005;
+        public static final int main_phonecall=0x7f030006;
+        public static final int main_phonecall_relative=0x7f030007;
+        public static final int main_photoload_new=0x7f030008;
+        public static final int main_photoupload=0x7f030009;
+        public static final int user_getphonenumber=0x7f03000a;
+        public static final int user_getphoto=0x7f03000b;
     }
     public static final class string {
         /**  From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/strings.xml 
@@ -79,10 +82,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int getphonenumber_button=0x7f060004;
         public static final int getphoto_button=0x7f060005;
         public static final int getphoto_button2=0x7f060006;
-        public static final int main_goto_imgupload=0x7f060007;
-        public static final int main_goto_phonecall=0x7f060008;
-        public static final int main_photocancel=0x7f060009;
-        public static final int main_uploadbutton=0x7f06000a;
+        public static final int getphoto_button3=0x7f060007;
+        public static final int main_goto_imgupload=0x7f060008;
+        public static final int main_goto_phonecall=0x7f060009;
+        public static final int main_photocancel=0x7f06000a;
+        public static final int main_uploadbutton=0x7f06000b;
     }
     public static final class style {
         /**  From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml 

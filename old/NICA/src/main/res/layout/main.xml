@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white"
+             tools:context=".User_Login">
+
+<!-- The primary full-screen view. This can be replaced with whatever view
+     is needed to present your content, e.g. VideoView, SurfaceView,
+     TextureView, etc. -->
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/pager"
+                                       android:layout_width="fill_parent"
+                                       android:layout_height="fill_parent" />
+
+
+<!-- This FrameLayout insets its children based on system windows using
+     android:fitsSystemWindows. -->
+<FrameLayout android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true">
+
+    <LinearLayout android:id="@+id/fullscreen_content_controls"
+                  style="?buttonBarStyle"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_horizontal"
+                  android:background="@color/white"
+                  android:orientation="horizontal"
+                  tools:ignore="UselessParent">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_goto_phonecall"
+                android:id="@id/main_goto_phonecall"
+                android:layout_gravity="left|center_vertical"
+                android:onClick="call"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_goto_imgupload"
+                android:id="@id/main_goto_imgupload"
+                android:layout_gravity="left|center_vertical"
+                android:onClick="photoupload"/>
+
+    </LinearLayout>
+</FrameLayout>
+
+</FrameLayout>

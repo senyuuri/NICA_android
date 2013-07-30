@@ -4,8 +4,23 @@
     <dataSet config="main" >
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res" >
             <file
+                name="ic_empty"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_empty.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_error"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_error.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_stub"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_stub.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -34,8 +49,23 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="ac_image_list"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/ac_image_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="ac_image_pager"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/ac_image_pager.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_login"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/activity_login.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="item_list_image"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/item_list_image.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -107,9 +137,12 @@
 uploadbutton
                 </item>
                 <item
-                    name="getphoto_button"
+                    name="main_photocancel"
+                    type="id"/>
+                <item
+                    name="main_imageview"
                     type="id">
-getphoto_button
+imageview
                 </item>
                 <item
                     name="getphoto_button2"
@@ -117,13 +150,10 @@ getphoto_button
 getphoto_button2
                 </item>
                 <item
-                    name="main_imageview"
+                    name="getphoto_button"
                     type="id">
-imageview
+getphoto_button
                 </item>
-                <item
-                    name="main_photocancel"
-                    type="id"/>
                 <item
                     name="main_goto_phonecall"
                     type="id"/>
@@ -136,19 +166,21 @@ listview_new
                     name="main_goto_imgupload"
                     type="id"/>
                 <item
-                    name="gridview"
-                    type="id">
-gridview
-                </item>
-                <item
                     name="main_getphoto"
                     type="id">
 getphoto
+                </item>
+                <item
+                    name="gridview"
+                    type="id">
+gridview
                 </item>
             </file>
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="getphoto_button3" >Take Photo
+                </string>
                 <string name="descr_image" >descrimg
                 </string>
                 <string name="main_goto_phonecall" >Call
@@ -159,13 +191,13 @@ getphoto
                 </string>
                 <string name="dummy_content" >Connecting to Server...
                 </string>
-                <string name="main_uploadbutton" >Upload
-                </string>
                 <string name="main_photocancel" >Cancel
                 </string>
-                <string name="dummy_button" >Retry
+                <string name="main_uploadbutton" >Upload
                 </string>
                 <string name="getphonenumber_button" >Confirm
+                </string>
+                <string name="dummy_button" >Retry
                 </string>
                 <string name="getphoto_button" >Upload
                 </string>
@@ -175,17 +207,6 @@ getphoto
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml"
                 qualifiers="" >
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Light" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
-                </style>
 
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
@@ -203,6 +224,17 @@ getphoto
                     <item name="android:background">
 @android:drawable/bottom_bar
                     </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
                 </style>
 
                 <style
@@ -281,26 +313,6 @@ true
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
-            <file
-                name="ac_image_pager"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/ac_image_pager.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="ic_empty"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_empty.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="ic_error"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_error.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="ic_stub"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_stub.png"
-                qualifiers="hdpi"
-                type="drawable" />
         </source>
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/build/res/rs/debug" />
     </dataSet>

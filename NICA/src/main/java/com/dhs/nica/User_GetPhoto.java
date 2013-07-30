@@ -107,14 +107,15 @@ public class User_GetPhoto extends Activity {
             BufferedReader in = null;
             try{
                 HttpClient client = new DefaultHttpClient();
-                HttpPost request = new HttpPost(Constant.SERVER_AVATAR_UPLOAD);
+                HttpPost request = new HttpPost(Constant.SERVER_IMAGE_UPLOAD);
                 List<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 
                 String phoneNumber = readFileData(FileName);
                 String base64_encode = bitmap_to_base64();
                 //Add parameter to POST
-                postParameters.add(new BasicNameValuePair("phonenum", phoneNumber));
-                postParameters.add(new BasicNameValuePair("avatar",base64_encode));
+                postParameters.add(new BasicNameValuePair("pn", phoneNumber));
+                postParameters.add(new BasicNameValuePair("avatar","1"));
+                postParameters.add(new BasicNameValuePair("imgdata",base64_encode));
                 Log.d(TAG, "Avatar parameter added"+base64_encode);
 
                 UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(

@@ -161,6 +161,7 @@ public class Main extends BaseActivity {
 
     public void call(View view){
         Intent icall = new Intent(getApplicationContext(),Main_PhoneCall.class);
+        icall.putExtra("user_info",circleinfo);
         startActivity(icall);
 
     }
