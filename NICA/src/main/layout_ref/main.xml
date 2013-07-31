@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".User_Login"
+             style="@style/AppTheme">
+
+<!-- The primary full-screen view. This can be replaced with whatever view
+     is needed to present your content, e.g. VideoView, SurfaceView,
+     TextureView, etc. -->
+   <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/pager"
+                                       android:layout_width="fill_parent"
+                                       android:layout_height="fill_parent" />
+
+
+<!-- This FrameLayout insets its children based on system windows using
+     android:fitsSystemWindows. -->
+    <ImageView
+            android:src="@drawable/devider"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="55dp"/>
+
+    <Button
+                    android:background="@drawable/logo"
+                    android:layout_margin="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@id/main_goto_phonecall"
+                    android:layout_gravity="top|center"
+                    android:onClick="call"/>
+
+    <Button
+            android:background="@drawable/camerab"
+            android:layout_width="120dp"
+            android:layout_margin="20dp"
+            android:layout_height="120dp"
+            android:id="@id/main_goto_imgupload"
+            android:layout_gravity="right|bottom"
+            android:onClick="photoupload"/>
+
+    <ImageView
+        android:src="@drawable/divider2"
+        android:layout_height="60dp"
+        android:layout_width="219dp"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="30dp"/>
+
+
+</FrameLayout>

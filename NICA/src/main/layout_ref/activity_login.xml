@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Login"
+    style="@style/AppTheme">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/login_content"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#ffe5e1d2"
+              android:textStyle="bold"
+              android:textSize="35sp"
+              android:text="@string/login_content"
+              android:layout_marginBottom="90dp"
+              android:layout_above="@+id/fullscreen_content_controls"
+              android:layout_centerHorizontal="true"/>
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+               android:id="@+id/loginIcon"
+               android:src="@drawable/login"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_centerHorizontal="true"/>
+
+    <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:layout_alignParentBottom="true">
+
+            <Button android:id="@+id/dummy_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/login_button"
+                android:onClick="retry"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

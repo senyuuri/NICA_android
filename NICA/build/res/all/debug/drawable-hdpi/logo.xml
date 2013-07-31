@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="true"
+          android:drawable="@drawable/login_p" />
+    <item android:state_focused="false" android:state_pressed="true"
+          android:drawable="@drawable/login_p" />
+    <item android:drawable="@drawable/login" />
+</selector><!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/logo.xml -->

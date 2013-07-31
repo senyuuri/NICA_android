@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <dependency>
         <groupId>com.nostra13.universalimageloader</groupId>
@@ -31,6 +32,7 @@
         <activity android:label="PreMain" android:name="com.dhs.nica.PreMain"/>
         <activity android:label="User_GetName" android:name="com.dhs.nica.User_GetName"/>
         <activity android:label="User_GetCircle" android:name="com.dhs.nica.User_GetCircle"/>
+        <activity android:label="Geolocation" android:name="com.dhs.nica.Geolocation"/>
     </application>
 
 </manifest>

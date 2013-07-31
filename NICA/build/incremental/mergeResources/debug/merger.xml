@@ -4,6 +4,61 @@
     <dataSet config="main" >
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res" >
             <file
+                name="applogo"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/applogo.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="camera"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/camera.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="camera_p"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/camera_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="camerab"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/camerab.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cancel"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/cancel.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cancel_p"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/cancel_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cancelb"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/cancelb.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="canvas"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/canvas.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="canvas2"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/canvas2.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="devider"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/devider.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="divider2"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/divider2.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_empty"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/ic_empty.png"
                 qualifiers="hdpi"
@@ -24,6 +79,26 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="login"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/login.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="login_p"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/login_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="logo"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/logo.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="logoia"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/logoia.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="placehold200"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/placehold200.gif"
                 qualifiers="hdpi"
@@ -31,6 +106,21 @@
             <file
                 name="placehold50"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/placehold50.gif"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="tick"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/tick.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="tick_p"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/tick_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="upload"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/upload.xml"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -99,6 +189,16 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="user_getcircle"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getcircle.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="user_getname"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getname.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="user_getphonenumber"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphonenumber.xml"
                 qualifiers=""
@@ -132,6 +232,9 @@
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/ids.xml"
                 qualifiers="" >
                 <item
+                    name="main_goto_geolocation"
+                    type="id"/>
+                <item
                     name="main_uploadbutton"
                     type="id">
 uploadbutton
@@ -140,26 +243,26 @@ uploadbutton
                     name="user_circle_edittext"
                     type="id"/>
                 <item
-                    name="main_photocancel"
-                    type="id"/>
+                    name="getphoto_button2"
+                    type="id">
+getphoto_button2
+                </item>
                 <item
                     name="main_imageview"
                     type="id">
 imageview
                 </item>
                 <item
-                    name="getphoto_button2"
-                    type="id">
-getphoto_button2
-                </item>
-                <item
-                    name="user_name_button"
+                    name="main_photocancel"
                     type="id"/>
                 <item
                     name="listview_new"
                     type="id">
 listview_new
                 </item>
+                <item
+                    name="user_name_button"
+                    type="id"/>
                 <item
                     name="main_goto_imgupload"
                     type="id"/>
@@ -195,15 +298,21 @@ getphoto
                 </string>
                 <string name="descr_image" >descrimg
                 </string>
+                <string name="main_goto_geolocation" >Geolocation
+                </string>
                 <string name="getphoto_button2" >Take my profile photo
                 </string>
-                <string name="main_photocancel" >Cancel
+                <string name="login_content" >Welcome
+                </string>
+                <string name="login_button" >Retry
                 </string>
                 <string name="main_uploadbutton" >Upload
                 </string>
-                <string name="getphonenumber_button" >Confirm
+                <string name="main_photocancel" >Cancel
                 </string>
                 <string name="dummy_button" >Retry
+                </string>
+                <string name="getphonenumber_button" >Confirm
                 </string>
                 <string name="getphoto_button" >Upload
                 </string>
@@ -213,7 +322,7 @@ getphoto
                 </string>
                 <string name="app_name" >NICA
                 </string>
-                <string name="dummy_content" >Connecting to Server...
+                <string name="dummy_content" >Welcome
                 </string>
                 <string name="getname_button" >Next
                 </string>
@@ -221,6 +330,17 @@ getphoto
             <file
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml"
                 qualifiers="" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.NoActionBar" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
 
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
@@ -238,17 +358,6 @@ getphoto
                     <item name="android:background">
 @android:drawable/bottom_bar
                     </item>
-                </style>
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Light" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
                 </style>
 
                 <style
@@ -272,8 +381,10 @@ getphoto
 
                 <style
                     name="AppTheme"
-                    parent="AppBaseTheme" >
-
+                    parent="android:Theme.Holo.NoActionBar" >
+                    <item name="android:background">
+#ffa77b72
+                    </item>
                     <!-- All customizations that are NOT specific to a particular API-level can go here. -->
                 </style>
             </file>
@@ -328,18 +439,8 @@ true
                 </style>
             </file>
             <file
-                name="user_getcircle"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getcircle.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="applogo"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/applogo.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="user_getname"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getname.xml"
+                name="geolocation"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/geolocation.xml"
                 qualifiers=""
                 type="layout" />
         </source>

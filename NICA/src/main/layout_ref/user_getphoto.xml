@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/AppTheme">
+
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginLeft="-1dp"/>
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+                      style="?buttonBarStyle"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="bottom|center_horizontal"
+                      android:background="@color/black_overlay"
+                      android:orientation="horizontal">
+
+            <Button android:id="@id/getphoto_button2"
+                    style="?buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/getphoto_button"
+                    android:onClick="upload"/>
+
+        </LinearLayout>
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+                      style="?buttonBarStyle"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="top|center_horizontal"
+                      android:background="@color/black_overlay"
+                      android:orientation="horizontal">
+
+            <Button android:id="@id/getphoto_button"
+                    style="?buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/getphoto_button2"
+                    android:onClick="onclick"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

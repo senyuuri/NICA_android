@@ -4,25 +4,18 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/white"
-             tools:context=".User_Login">
+             tools:context=".User_Login"
+             style="@style/AppTheme">
 
 <!-- The primary full-screen view. This can be replaced with whatever view
      is needed to present your content, e.g. VideoView, SurfaceView,
      TextureView, etc. -->
-    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-                                       android:id="@+id/pager"
-                                       android:layout_width="fill_parent"
-                                       android:layout_height="fill_parent" />
+
 
 
 <!-- This FrameLayout insets its children based on system windows using
      android:fitsSystemWindows. -->
-<FrameLayout android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:fitsSystemWindows="true">
-
-    <LinearLayout android:id="@+id/fullscreen_content_controls"
+<!--    <LinearLayout android:id="@+id/fullscreen_content_controls"
                   style="?buttonBarStyle"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -46,8 +39,59 @@
                 android:layout_gravity="left|center_vertical"
                 android:onClick="photoupload"/>
 
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/main_goto_geolocation"
+                android:id="@id/main_goto_geolocation"
+                android:onClick="goto_geolocation"/>
+
     </LinearLayout>
-</FrameLayout>
+    -->
+
+
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/pager"
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="500dp"
+                                       android:layout_marginTop="60dp"/>
+
+    <Button
+            android:id="@+id/divider"
+            android:background="@drawable/devider"
+            android:layout_height="100dp"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dp"/>
+
+
+
+    <Button
+            android:background="@drawable/divider2"
+            android:layout_height="60dp"
+            android:layout_width="219dp"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="30dp"/>
+
+    <Button
+            android:background="@drawable/logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@id/main_goto_phonecall"
+            android:layout_gravity="top|center"
+            android:onClick="call"/>
+
+    <Button
+            android:background="@drawable/camerab"
+            android:layout_width="120dp"
+            android:layout_margin="20dp"
+            android:layout_height="120dp"
+            android:id="@id/main_goto_imgupload"
+            android:layout_gravity="right|bottom"
+            android:onClick="photoupload"/>
+
+
+
 
 </FrameLayout>
 <!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main.xml -->

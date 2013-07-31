@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content" >
+              android:layout_height="160dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="120dp"
+              android:id="@+id/contact"
+              android:background="#fffff4b9">
 
     <ImageView
             android:id="@+id/image"
-            android:layout_width="72dip"
-            android:layout_height="72dip"
-            android:layout_margin="3dip"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/descr_image"
             android:scaleType="centerCrop" />
@@ -16,8 +22,10 @@
             android:id="@+id/text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginLeft="20dip"
-            android:textSize="22sp" />
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="30sp"
+            android:background="#fffff4b9"/>
 
+</LinearLayout>
 </LinearLayout><!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/item_list_image.xml -->

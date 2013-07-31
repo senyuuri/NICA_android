@@ -4,7 +4,8 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:onClick="onclick">
+              android:onClick="onclick"
+              style="@style/AppTheme">
 
     <EditText
             android:layout_width="fill_parent"
@@ -13,12 +14,12 @@
             android:id="@+id/editText"
             android:layout_gravity="center"/>
 
-<Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/getphonenumber_button"
-        android:id="@+id/button"
-        android:layout_gravity="center"
-        android:onClick="confirm"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/getphonenumber_button"
+            android:id="@+id/button"
+            android:layout_gravity="center"
+            android:onClick="confirm"/>
 
 </LinearLayout><!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getphonenumber.xml -->

@@ -15,6 +15,7 @@
     <item name="gridview" type="id">gridview</item>
     <item name="listview_new" type="id">listview_new</item>
     <item name="main_getphoto" type="id">getphoto</item>
+    <item name="main_goto_geolocation" type="id"/>
     <item name="main_goto_imgupload" type="id"/>
     <item name="main_goto_phonecall" type="id"/>
     <item name="main_imageview" type="id">imageview</item>
@@ -28,18 +29,21 @@
     <string name="app_name">NICA</string>
     <string name="descr_image">descrimg</string>
     <string name="dummy_button">Retry</string>
-    <string name="dummy_content">Connecting to Server...</string>
+    <string name="dummy_content">Welcome</string>
     <string name="getname_button">Next</string>
     <string name="getphonenumber_button">Confirm</string>
     <string name="getphoto_button">Upload</string>
     <string name="getphoto_button2">Take my profile photo</string>
     <string name="getphoto_button3">Take Photo</string>
+    <string name="login_button">Retry</string>
+    <string name="login_content">Welcome</string>
+    <string name="main_goto_geolocation">Geolocation</string>
     <string name="main_goto_imgupload">Photo Upload</string>
     <string name="main_goto_phonecall">Call</string>
     <string name="main_photocancel">Cancel</string>
     <string name="main_uploadbutton">Upload</string>
     <!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
+    <style name="AppBaseTheme" parent="android:Theme.Holo.NoActionBar">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -47,7 +51,8 @@
         -->
     </style>
 
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="android:Theme.Holo.NoActionBar">
+        <item name="android:background">#ffa77b72</item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 

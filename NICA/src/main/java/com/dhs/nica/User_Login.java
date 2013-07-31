@@ -3,6 +3,7 @@ package com.dhs.nica;
 import com.dhs.nica.util.SystemUiHider;
 
 import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -211,7 +212,8 @@ public class User_Login extends BaseActivity {
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);
-
+        //ActionBar actionBar = getActionBar();
+        //actionBar.setDisplayUseLogoEnabled(true);
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
         mSystemUiHider = SystemUiHider.getInstance(this, contentView, HIDER_FLAGS);

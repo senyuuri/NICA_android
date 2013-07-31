@@ -54,11 +54,9 @@ public class Main_PhotoUpload_new extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_photoload_new);
-        button2 = (Button) findViewById(R.id.getphoto_button2);
-        button2.setEnabled(false);
+        //button2 = (Button) findViewById(R.id.getphoto_button2);
+        //button2.setEnabled(false);
 
-    }
-    public void onclick(View view){
         imageView = (ImageView) findViewById(R.id.imageView);
 
         _path = Environment.getExternalStorageDirectory() + File.separator +  "temp.jpg";
@@ -70,10 +68,15 @@ public class Main_PhotoUpload_new extends Activity{
         intent.putExtra( MediaStore.EXTRA_OUTPUT, outputFileUri );
 
         startActivityForResult(intent, REQUEST_CODE);
+
     }
     public void upload(View view){
         new Thread(runnable).start();
 
+    }
+
+    public void cancel(View view){
+        this.finish();
     }
 
     android.os.Handler h = new android.os.Handler(){
