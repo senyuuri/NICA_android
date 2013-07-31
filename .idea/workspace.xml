@@ -77,64 +77,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="0" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="4200">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PreMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/PreMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="27" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.0" vertical-offset="1273" max-vertical-offset="1935">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1451#4462#0" expanded="false" />
-                <element signature="e#2542#2557#0" expanded="false" />
-                <element signature="e#4451#4452#0" expanded="false" />
-                <element signature="e#4507#5033#0" expanded="false" />
-                <element signature="e#5026#5027#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NICA/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1005">
+            <state line="33" column="13" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constant.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Constant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="17" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
+      <file leaf-file-name="user_getname.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getname.xml">
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User_Login.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="41" selection-start="3935" selection-end="3935" vertical-scroll-proportion="0.0" vertical-offset="4245" max-vertical-offset="5880">
+            <state line="19" column="26" selection-start="716" selection-end="716" vertical-scroll-proportion="-10.555555" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User_GetName.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetName.java">
+      <file leaf-file-name="User_GetPhoto.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="143" column="49" selection-start="4772" selection-end="4772" vertical-scroll-proportion="0.0" vertical-offset="1946" max-vertical-offset="3570">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ids.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NICA/src/main/res/values/ids.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="633" selection-start="680" selection-end="684" vertical-scroll-proportion="-1.1538461" vertical-offset="0" max-vertical-offset="135">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_getphoto.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getphoto.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="58" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-12.777778" vertical-offset="105" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -143,44 +133,51 @@
       <file leaf-file-name="User_GetCircle.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetCircle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <folding />
+            <state line="35" column="46" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="1080">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_getname.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getname.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <folding />
+      <file leaf-file-name="User_GetName.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="70" selection-start="1182" selection-end="1217" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="870">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_getcircle.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getcircle.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main_PhoneCall.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main_PhoneCall.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main_PhoneCall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="17" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="4350">
-              <folding>
-                <element signature="e#4202#4595#0" expanded="true" />
-                <element signature="e#4584#4585#0" expanded="true" />
-              </folding>
+            <state line="88" column="34" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.7429245" vertical-offset="465" max-vertical-offset="3765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_getcircle.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getcircle.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="50" selection-start="421" selection-end="421" vertical-scroll-proportion="-5.5555553" vertical-offset="0" max-vertical-offset="450">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User_GetPhoneNumber.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoneNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="870">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -231,26 +228,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/NICA/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/NICA/build.gradle" />
         <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/BaseActivity.java" />
         <option value="$PROJECT_DIR$/NICA/src/main/res/layout/ac_image_pager.xml" />
         <option value="$PROJECT_DIR$/NICA/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/NICA/src/main/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Constant.java" />
-        <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_Login.java" />
         <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main.java" />
         <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/PreMain.java" />
-        <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoto.java" />
-        <option value="$PROJECT_DIR$/NICA/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main_PhoneCall.java" />
+        <option value="$PROJECT_DIR$/NICA/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_Login.java" />
+        <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main_PhotoUpload_new.java" />
+        <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetName.java" />
         <option value="$PROJECT_DIR$/NICA/src/main/res/layout/user_getname.xml" />
         <option value="$PROJECT_DIR$/NICA/src/main/res/layout/user_getcircle.xml" />
+        <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetCircle.java" />
+        <option value="$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoto.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="21" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="790" />
@@ -641,6 +639,7 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="HT15RV820153" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MyAvd0" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
@@ -832,16 +831,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="790" extended-state="6" />
+    <frame x="21" y="22" width="1440" height="790" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27945402" sideWeight="0.6746269" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32537314" sideWeight="0.61047345" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32537314" sideWeight="0.61047345" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32537314" sideWeight="0.38952655" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -849,16 +849,15 @@
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36783043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6373134" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67164177" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19440459" sideWeight="0.67164177" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19440459" sideWeight="0.6746269" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32537314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27945402" sideWeight="0.6421446" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -923,133 +922,141 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/main_phonecall.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/main_phonecall_relative.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="316" column="0" selection-start="11268" selection-end="11268" vertical-scroll-proportion="0.0" vertical-offset="3508" max-vertical-offset="5700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/main_photoupload.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="13.333333" vertical-offset="360" max-vertical-offset="885">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoneNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main_PhotoUpload_new.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/drawable-mdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getphonenumber.xml">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/drawable-hdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="3420">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="0" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="4200">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getname.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1005">
+        <state line="19" column="26" selection-start="716" selection-end="716" vertical-scroll-proportion="-10.555555" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/PreMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="27" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.0" vertical-offset="1273" max-vertical-offset="1935">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1451#4462#0" expanded="false" />
-            <element signature="e#2542#2557#0" expanded="false" />
-            <element signature="e#4451#4452#0" expanded="false" />
-            <element signature="e#4507#5033#0" expanded="false" />
-            <element signature="e#5026#5027#0" expanded="false" />
-          </folding>
+        <state line="33" column="13" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Constant.java">
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoneNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state line="49" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="870">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main_PhoneCall.java">
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getcircle.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="4350">
-          <folding>
-            <element signature="e#4202#4595#0" expanded="true" />
-            <element signature="e#4584#4585#0" expanded="true" />
-          </folding>
+        <state line="10" column="50" selection-start="421" selection-end="421" vertical-scroll-proportion="-5.5555553" vertical-offset="0" max-vertical-offset="450">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_Login.java">
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getphoto.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="41" selection-start="3935" selection-end="3935" vertical-scroll-proportion="0.0" vertical-offset="4245" max-vertical-offset="5880">
+        <state line="30" column="58" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-12.777778" vertical-offset="105" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+        <state line="45" column="70" selection-start="1182" selection-end="1217" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="870">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/values/ids.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="633" selection-start="680" selection-end="684" vertical-scroll-proportion="-1.1538461" vertical-offset="0" max-vertical-offset="135">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetCircle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
+        <state line="35" column="46" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="1080">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getname.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/User_GetPhoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="49" selection-start="4772" selection-end="4772" vertical-scroll-proportion="0.0" vertical-offset="1946" max-vertical-offset="3570">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NICA/src/main/res/layout/user_getcircle.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+    <entry file="file://$PROJECT_DIR$/NICA/src/main/java/com/dhs/nica/Main_PhoneCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="34" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.7429245" vertical-offset="465" max-vertical-offset="3765">
           <folding />
         </state>
       </provider>

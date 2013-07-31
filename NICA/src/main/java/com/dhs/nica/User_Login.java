@@ -108,40 +108,32 @@ public class User_Login extends BaseActivity {
         {
             switch(msg.what)
             {
-                //"yy" Valid number and valid avatar
+                //"y" Registered user
                 case 1:
                     Intent intent = new Intent(getApplicationContext(), PreMain.class);
                     startActivity(intent);
-                    Log.d(TAG, "Result:"+"yy");
+                    Log.d(TAG, "LoginResult:"+"y");
                     Toast toast = Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_LONG);
                     toast.show();
                     break;
 
-                // "yn" Valid number without avatar
+                // "n"
                 case 2:
-
-                    Log.d(TAG, "Result:"+"yn");
-                    Intent intent2 = new Intent(getApplicationContext(), User_GetPhoto.class);
+                    Log.d(TAG, "Result:"+"n");
+                    Intent intent2 = new Intent(getApplicationContext(), User_GetName.class);
+                    intent2.putExtra("pn",phoneNumber);
                     startActivity(intent2);
                     break;
 
-                // "n" Number not registrated
-                case 3:
-                    //do somthing here to show error
-                    Log.e(TAG,"Handler: 'n' value returned");
-                    break;
+
 
                 // Invalid return content
-                case 4:
+                case 3:
                     //do something here to show error
                     Log.e(TAG,"Handler: Invalid return content");
                     break;
 
-                // Exception Handling
-                case 5:
-                    Log.e(TAG,"Exception happened.");
-                    //do something here to show error
-                    break;
+
             }
         }
     };
@@ -177,21 +169,17 @@ public class User_Login extends BaseActivity {
 
                 //Check response status
                 msg = h.obtainMessage();
-                if(lineStr.equals("yy") ){
+                if(lineStr.equals("y") ){
                     msg.what = 1;
                     Log.d(TAG,"msg.what:1");
 
-                } else if(lineStr.equals("yn")){
+                } else if(lineStr.equals("n")){
                     msg.what = 2;
                     Log.d(TAG,"msg.what:2");
                 }
-                else if(lineStr.equals("n")){
+                else{
                     msg.what = 3;
                     Log.d(TAG,"msg.what:3");
-                }
-                else{
-                    msg.what = 4;
-                    Log.d(TAG,"msg.what:4");
                 }
                 h.sendMessage(msg);
 

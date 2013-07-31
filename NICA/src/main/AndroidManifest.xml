@@ -55,7 +55,12 @@
         <activity
                 android:name="com.dhs.nica.PreMain"
                 android:label="PreMain"></activity>
-
+        <activity
+                android:name="com.dhs.nica.User_GetName"
+                android:label="User_GetName"></activity>
+        <activity
+                android:name="com.dhs.nica.User_GetCircle"
+                android:label="User_GetCircle"></activity>
     </application>
 
 </manifest>

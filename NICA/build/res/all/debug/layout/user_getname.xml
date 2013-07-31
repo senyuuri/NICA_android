@@ -22,4 +22,4 @@
             android:focusableInTouchMode="false"
             android:singleLine="false"
             android:onClick="onclick"/>
-</LinearLayout>
+</LinearLayout><!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getname.xml -->

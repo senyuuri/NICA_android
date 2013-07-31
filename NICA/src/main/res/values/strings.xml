@@ -8,5 +8,5 @@
     <string name="getphoto_button">Upload</string>
     <string name="getphoto_button2">Take my profile photo</string><string name="main_uploadbutton">Upload</string><string name="main_photocancel">Cancel</string><string name="main_goto_phonecall">Call</string><string name="main_goto_imgupload">Photo Upload</string>
     <string name="getphoto_button3">Take Photo</string>
-    <string name="descr_image">descrimg</string>
+    <string name="descr_image">descrimg</string><string name="getname_button">Next</string>
 </resources>

@@ -198,9 +198,9 @@ public class Main_PhotoUpload_new extends Activity{
             }
     }
     public static String GetImageStr(String imgFilePath) {
-        // 将图片文件转化为字节数组字符串，并对其进行Base64编码处理
+
         byte[] data = null;
-        // 读取图片字节数组
+
         try {
             InputStream in = new FileInputStream(imgFilePath);
             data = new byte[in.available()];
@@ -209,8 +209,8 @@ public class Main_PhotoUpload_new extends Activity{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // 对字节数组Base64编码
-        return new String(Base64.encode(data,Base64.DEFAULT));// 返回Base64编码过的字节数组字符串
+
+        return new String(Base64.encode(data,Base64.DEFAULT));
     }
 
     public void writeFileData(String filename, String message){

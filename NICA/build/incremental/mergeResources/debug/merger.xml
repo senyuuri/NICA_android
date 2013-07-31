@@ -137,6 +137,9 @@
 uploadbutton
                 </item>
                 <item
+                    name="user_circle_edittext"
+                    type="id"/>
+                <item
                     name="main_photocancel"
                     type="id"/>
                 <item
@@ -150,12 +153,7 @@ imageview
 getphoto_button2
                 </item>
                 <item
-                    name="getphoto_button"
-                    type="id">
-getphoto_button
-                </item>
-                <item
-                    name="main_goto_phonecall"
+                    name="user_name_button"
                     type="id"/>
                 <item
                     name="listview_new"
@@ -166,14 +164,28 @@ listview_new
                     name="main_goto_imgupload"
                     type="id"/>
                 <item
-                    name="main_getphoto"
-                    type="id">
-getphoto
-                </item>
-                <item
                     name="gridview"
                     type="id">
 gridview
+                </item>
+                <item
+                    name="user_circle_button"
+                    type="id"/>
+                <item
+                    name="user_name_edittext"
+                    type="id"/>
+                <item
+                    name="getphoto_button"
+                    type="id">
+getphoto_button
+                </item>
+                <item
+                    name="main_goto_phonecall"
+                    type="id"/>
+                <item
+                    name="main_getphoto"
+                    type="id">
+getphoto
                 </item>
             </file>
             <file
@@ -183,13 +195,7 @@ gridview
                 </string>
                 <string name="descr_image" >descrimg
                 </string>
-                <string name="main_goto_phonecall" >Call
-                </string>
                 <string name="getphoto_button2" >Take my profile photo
-                </string>
-                <string name="app_name" >NICA
-                </string>
-                <string name="dummy_content" >Connecting to Server...
                 </string>
                 <string name="main_photocancel" >Cancel
                 </string>
@@ -202,6 +208,14 @@ gridview
                 <string name="getphoto_button" >Upload
                 </string>
                 <string name="main_goto_imgupload" >Photo Upload
+                </string>
+                <string name="main_goto_phonecall" >Call
+                </string>
+                <string name="app_name" >NICA
+                </string>
+                <string name="dummy_content" >Connecting to Server...
+                </string>
+                <string name="getname_button" >Next
                 </string>
             </file>
             <file
@@ -313,6 +327,21 @@ true
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="user_getcircle"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getcircle.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="applogo"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/applogo.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="user_getname"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getname.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/build/res/rs/debug" />
     </dataSet>

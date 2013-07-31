@@ -8,7 +8,7 @@
     <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/user_name_edittext"
+            android:id="@+id/user_circle_edittext"
             android:layout_gravity="left|center_vertical"
             android:inputType="text"
             />
@@ -17,9 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/getname_button"
-            android:id="@+id/user_name_button"
+            android:id="@+id/user_circle_button"
             android:layout_gravity="left|center_vertical"
             android:focusableInTouchMode="false"
             android:singleLine="false"
             android:onClick="onclick"/>
-</LinearLayout>
+</LinearLayout><!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/user_getcircle.xml -->

@@ -51,12 +51,20 @@ public class User_GetPhoto extends Activity {
 
     private String lineStr;
 
+    private String phonenumber;
+    private String username;
+    private String circle;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_getphoto);
         button2 = (Button) findViewById(R.id.getphoto_button2);
         button2.setEnabled(false);
+        Bundle b = this.getIntent().getExtras();
+        phonenumber = b.getString("pn");
+        username = b.getString("username");
+        circle = b.getString("circle");
 
     }
 
@@ -116,6 +124,8 @@ public class User_GetPhoto extends Activity {
                 postParameters.add(new BasicNameValuePair("pn", phoneNumber));
                 postParameters.add(new BasicNameValuePair("avatar","1"));
                 postParameters.add(new BasicNameValuePair("imgdata",base64_encode));
+                postParameters.add(new BasicNameValuePair("circle",circle));
+                postParameters.add(new BasicNameValuePair("username",username));
                 Log.d(TAG, "Avatar parameter added"+base64_encode);
 
                 UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(
@@ -131,7 +141,7 @@ public class User_GetPhoto extends Activity {
 
                 //Check response status
                 msg = h.obtainMessage();
-                if(lineStr.equals("y") ){
+                if(lineStr.equals("avatar success") ){
                     msg.what = 1;
                     Log.d(TAG,"msg.what:1");}
                 else{

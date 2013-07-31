@@ -27,10 +27,10 @@
         <activity android:label="Main" android:name="com.dhs.nica.Main"/>
         <activity android:label="Main_PhoneCall" android:name="com.dhs.nica.Main_PhoneCall"/>
         <activity android:label="Main_PhotoUpload_new" android:name="com.dhs.nica.Main_PhotoUpload_new"/>
-        <service android:name="com.dhs.nica.DownloadService">
-                </service>
-        <activity android:label="PreMain" android:name="com.dhs.nica.PreMain"/>
 
+        <activity android:label="PreMain" android:name="com.dhs.nica.PreMain"/>
+        <activity android:label="User_GetName" android:name="com.dhs.nica.User_GetName"/>
+        <activity android:label="User_GetCircle" android:name="com.dhs.nica.User_GetCircle"/>
     </application>
 
 </manifest>
