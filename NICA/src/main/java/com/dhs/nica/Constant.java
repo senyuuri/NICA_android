@@ -12,7 +12,7 @@ import java.io.FileOutputStream;
  */
 
 public class Constant {
-    public static final String SERVER_LOGIN = "http://metallica-nica.appspot.com/" ;
+    public static final String SERVER_LOGIN = "http://metallica-nica.appspot.com/signup" ;
     public static final String SERVER_AVATAR_UPLOAD = "http://metallica-nica.appspot.com/avatarupload";
     public static final String SERVER_IMAGE_UPLOAD = "http://metallica-nica.appspot.com/uploadimage";
     public static final String SERVER_IMAGE_LIST_GENERATE="http://metallica-nica.appspot.com/imagelistgenerate";

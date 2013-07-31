@@ -38,7 +38,7 @@ public class PreMain extends BaseActivity {
     private String lineStr2;
     static final String filename = "PN";
     String[] imageUrls = new String[100];
-
+    private Integer total;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +84,7 @@ public class PreMain extends BaseActivity {
                     JSONObject obj = new JSONObject(lineStr2);
                     JSONArray jarry = obj.getJSONArray("image_ids");
                     Log.d(TAG,String.valueOf(jarry.length()));
+                    total=jarry.length();
                     for(int i  = 0; i < jarry.length(); i++){
 
                         imageUrls[i] = Constant.SERVER_GET_IMAGE+jarry.getString(i);
@@ -128,6 +129,7 @@ public class PreMain extends BaseActivity {
                     Intent i = new Intent(getApplicationContext(),Main.class);
                     i.putExtra("imageurl",imageUrls);
                     i.putExtra("circleinfo",lineStr);
+                    i.putExtra("total",total);
                     startActivity(i);
                     break;
             }

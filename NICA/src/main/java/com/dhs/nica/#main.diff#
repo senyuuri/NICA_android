@@ -1,0 +1,72 @@
+*** Main.java	2013-07-30 22:20:24.000000000 +0800
+--- old/Main.java	2013-07-30 00:23:05.000000000 +0800
+***************
+*** 78,84 ****
+      static final String filename2 = "JsonCircle";
+      private Button button1,button2;
+      private File cache;
+!     private Integer total;
+      private String[] imageUrls = new String[100];
+      private String circleinfo;
+  
+--- 78,84 ----
+      static final String filename2 = "JsonCircle";
+      private Button button1,button2;
+      private File cache;
+! 
+      private String[] imageUrls = new String[100];
+      private String circleinfo;
+  
+***************
+*** 103,109 ****
+          Bundle bundle = this.getIntent().getExtras();
+          imageUrls = bundle.getStringArray("imageurl");
+          circleinfo = bundle.getString("circleinfo");
+!         total=bundle.getInt("total",0);
+  
+          //String[] imageUrls = Constant.IMAGES;
+  
+--- 103,109 ----
+          Bundle bundle = this.getIntent().getExtras();
+          imageUrls = bundle.getStringArray("imageurl");
+          circleinfo = bundle.getString("circleinfo");
+al;! 
+  
+          //String[] imageUrls = Constant.IMAGES;
+  
+***************
+*** 157,165 ****
+  
+          }
+      };*/
+!     @Override
+!     public void onBackPressed() {
+!     }
+  
+      public void call(View view){
+          Intent icall = new Intent(getApplicationContext(),Main_PhoneCall.class);
+--- 157,163 ----
+  
+          }
+      };*/
+! 
+  
+      public void call(View view){
+          Intent icall = new Intent(getApplicationContext(),Main_PhoneCall.class);
+***************
+*** 254,260 ****
+  
+          @Override
+          public int getCount() {
+!             return total;
+          }
+  
+          @Override
+--- 252,258 ----
+  
+          @Override
+          public int getCount() {
+!             return images.length;
+          }
+  
+          @Override

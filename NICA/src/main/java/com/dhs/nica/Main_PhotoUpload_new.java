@@ -3,15 +3,18 @@ package com.dhs.nica;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Message;
+import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -23,6 +26,7 @@ import org.apache.http.util.EncodingUtils;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,7 +45,7 @@ public class Main_PhotoUpload_new extends Activity{
     private Button button1, button2;
 
     //Name correct? !!!!!
-
+    String _path;
     static final String TAG = "dhs_nica";
 
     String FileName = "PN";
@@ -56,7 +60,15 @@ public class Main_PhotoUpload_new extends Activity{
     }
     public void onclick(View view){
         imageView = (ImageView) findViewById(R.id.imageView);
+
+        _path = Environment.getExternalStorageDirectory() + File.separator +  "temp.jpg";
+        File file = new File( _path );
+        Uri outputFileUri = Uri.fromFile(file);
+
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+
+        intent.putExtra( MediaStore.EXTRA_OUTPUT, outputFileUri );
+
         startActivityForResult(intent, REQUEST_CODE);
     }
     public void upload(View view){
@@ -103,7 +115,7 @@ public class Main_PhotoUpload_new extends Activity{
                 List<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 
                 String phoneNumber = readFileData(FileName);
-                String base64_encode = bitmap_to_base64();
+                String base64_encode = GetImageStr(Environment.getExternalStorageDirectory() + File.separator +  "temp.jpg");
                 //Add parameter to POST
                 postParameters.add(new BasicNameValuePair("pn", phoneNumber));
                // postParameters.add(new BasicNameValuePair("avatar","1"));
@@ -147,7 +159,7 @@ public class Main_PhotoUpload_new extends Activity{
         }
     };
 
-
+/*
     public String bitmap_to_base64(){
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG,90,out);
@@ -156,22 +168,23 @@ public class Main_PhotoUpload_new extends Activity{
         return outbyte1;
     }
 
-
+*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         InputStream stream = null;
         if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK)
             try {
                 // Recyle unused bitmaps
-                if (bitmap != null) {
-                    bitmap.recycle();
+                File imgFile=new File(Environment.getExternalStorageDirectory() + File.separator +  "temp.jpg");
+                if(imgFile.exists()){
+
+                    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+                   // ImageView myImage = (ImageView) findViewById(R.id.imageviewTest);
+                    imageView.setImageBitmap(myBitmap);
+
                 }
-                //stream = getContentResolver().openInputStream(data.getData());
-                Bundle extras = data.getExtras();
-
-                bitmap = (Bitmap) extras.get("data");
-
-                imageView.setImageBitmap(bitmap);
+       //         imageView.setImageBitmap(bitmap);
                 button2.setEnabled(true);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -184,7 +197,21 @@ public class Main_PhotoUpload_new extends Activity{
                     }
             }
     }
-
+    public static String GetImageStr(String imgFilePath) {
+        // 将图片文件转化为字节数组字符串，并对其进行Base64编码处理
+        byte[] data = null;
+        // 读取图片字节数组
+        try {
+            InputStream in = new FileInputStream(imgFilePath);
+            data = new byte[in.available()];
+            in.read(data);
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // 对字节数组Base64编码
+        return new String(Base64.encode(data,Base64.DEFAULT));// 返回Base64编码过的字节数组字符串
+    }
 
     public void writeFileData(String filename, String message){
         try {

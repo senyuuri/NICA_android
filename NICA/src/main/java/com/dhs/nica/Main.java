@@ -78,7 +78,7 @@ public class Main extends BaseActivity {
     static final String filename2 = "JsonCircle";
     private Button button1,button2;
     private File cache;
-
+    private Integer total;
     private String[] imageUrls = new String[100];
     private String circleinfo;
 
@@ -103,7 +103,7 @@ public class Main extends BaseActivity {
         Bundle bundle = this.getIntent().getExtras();
         imageUrls = bundle.getStringArray("imageurl");
         circleinfo = bundle.getString("circleinfo");
-
+        total=bundle.getInt("total",0);
 
         //String[] imageUrls = Constant.IMAGES;
 
@@ -157,7 +157,9 @@ public class Main extends BaseActivity {
 
         }
     };*/
-
+    @Override
+    public void onBackPressed() {
+    }
 
     public void call(View view){
         Intent icall = new Intent(getApplicationContext(),Main_PhoneCall.class);
@@ -252,7 +254,7 @@ public class Main extends BaseActivity {
 
         @Override
         public int getCount() {
-            return images.length;
+            return total;
         }
 
         @Override

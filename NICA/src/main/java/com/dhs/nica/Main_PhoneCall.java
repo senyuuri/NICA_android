@@ -3,9 +3,9 @@ package com.dhs.nica;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.net.Uri;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
@@ -99,21 +99,16 @@ public class Main_PhoneCall extends Activity{
                 startImagePagerActivity(position);
             }*/
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
-            public void onItemClick(AdapterView<?> parent, final View view,
-                                    int position, long id) {
+            public void onItemClick(AdapterView<?> parent, final View view,int position, long id) {
                 try{
-                Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+pnlist[position]));
-                startActivity(i);}catch (Exception e){Log.d(TAG,e.toString());}
-
-            }
-
+                    Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+pnlist[position]));
+                    startActivity(i);}catch (Exception e){Log.d(TAG,e.toString());}
+                }
         });
 
+
     }
-
-
     @Override
     public void onBackPressed() {
         AnimateFirstDisplayListener.displayedImages.clear();
