@@ -121,6 +121,11 @@ public class Main_PhoneCall extends Activity{
         intent.putExtra(Extra.IMAGE_POSITION, position);
         startActivity(intent);
     }*/
+
+    public void cancel(View view){
+        this.finish();
+    }
+
     class ItemAdapter extends BaseAdapter {
 
         private ImageLoadingListener animateFirstListener = new AnimateFirstDisplayListener();

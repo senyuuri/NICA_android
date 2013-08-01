@@ -79,6 +79,36 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="info"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/info.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="info_p"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/info_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="infob"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/infob.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="location"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/location.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="location_p"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/location_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="locationb"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/locationb.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="login"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/login.png"
                 qualifiers="hdpi"
@@ -109,6 +139,11 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="refreshb"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/refreshb.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="tick"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/tick.png"
                 qualifiers="hdpi"
@@ -116,6 +151,16 @@
             <file
                 name="tick_p"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/tick_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="update"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/update.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="update_p"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/drawable-hdpi/update_p.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -151,6 +196,11 @@
             <file
                 name="activity_login"
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/activity_login.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="geolocation"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/geolocation.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -331,17 +381,6 @@ getphoto
                 path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml"
                 qualifiers="" >
 
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Holo.NoActionBar" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
-                </style>
-
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
 2dp
@@ -358,6 +397,17 @@ getphoto
                     <item name="android:background">
 @android:drawable/bottom_bar
                     </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.NoActionBar" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
                 </style>
 
                 <style
@@ -438,11 +488,6 @@ true
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
-            <file
-                name="geolocation"
-                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/geolocation.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/build/res/rs/debug" />
     </dataSet>

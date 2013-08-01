@@ -175,7 +175,10 @@ public class Main extends BaseActivity {
     }
 
 
-
+    public void goto_geolocation(View view){
+        Intent igeo = new Intent(getApplicationContext(),Geolocation.class);
+        startActivity(igeo);
+    }
 
 
 
@@ -200,7 +203,10 @@ public class Main extends BaseActivity {
 
 
 
-
+    public void refresh(View view){
+        Intent i = new Intent(this,PreMain.class);
+        startActivity(i);
+    }
 
 
     public void writeFileData(String filename, String message){

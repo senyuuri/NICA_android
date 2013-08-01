@@ -66,13 +66,13 @@
 
 
 
-    <Button
+<!--    <Button
             android:background="@drawable/divider2"
             android:layout_height="60dp"
             android:layout_width="219dp"
             android:layout_gravity="left|bottom"
             android:layout_marginBottom="30dp"/>
-
+-->
     <Button
             android:background="@drawable/logo"
             android:layout_width="120dp"
@@ -80,17 +80,40 @@
             android:id="@id/main_goto_phonecall"
             android:layout_gravity="top|center"
             android:onClick="call"/>
+    <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/infob"
+            android:id="@+id/help"
+            android:layout_gravity="right|top"
+            android:onClick=""/>
 
     <Button
             android:background="@drawable/camerab"
-            android:layout_width="120dp"
-            android:layout_margin="20dp"
-            android:layout_height="120dp"
+            android:layout_width="90dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="90dp"
             android:id="@id/main_goto_imgupload"
             android:layout_gravity="right|bottom"
             android:onClick="photoupload"/>
 
-
+    <Button
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/locationb"
+            android:id="@id/main_goto_geolocation"
+            android:layout_gravity="left|bottom"
+            android:onClick="goto_geolocation"/>
+    <Button
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="0dp"
+            android:background="@drawable/refreshb"
+            android:id="@+id/main_refresh"
+            android:layout_gravity="center|bottom"
+            android:onClick="refresh"/>
 
 
 </FrameLayout>

@@ -1,6 +1,7 @@
 package com.dhs.nica;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -43,6 +44,7 @@ public class Main_PhotoUpload_new extends Activity{
     private Bitmap bitmap;
     private ImageView imageView;
     private Button button1, button2;
+    private ProgressDialog progressDialog;
 
     //Name correct? !!!!!
     String _path;
@@ -71,6 +73,7 @@ public class Main_PhotoUpload_new extends Activity{
 
     }
     public void upload(View view){
+        progressDialog = ProgressDialog.show(Main_PhotoUpload_new.this, "Uploading", "Please wait...", true, false);
         new Thread(runnable).start();
 
     }
@@ -86,6 +89,7 @@ public class Main_PhotoUpload_new extends Activity{
             {
                 //"y" Upload succeed
                 case 1:
+                    progressDialog.dismiss();
                     Intent intent = new Intent(getApplicationContext(), PreMain.class);
                     startActivity(intent);
                     Toast toast = Toast.makeText(getApplicationContext(),"Image upload successed",Toast.LENGTH_LONG);
@@ -175,6 +179,7 @@ public class Main_PhotoUpload_new extends Activity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         InputStream stream = null;
+
         if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK)
             try {
                 // Recyle unused bitmaps
@@ -186,6 +191,8 @@ public class Main_PhotoUpload_new extends Activity{
                    // ImageView myImage = (ImageView) findViewById(R.id.imageviewTest);
                     imageView.setImageBitmap(myBitmap);
 
+                }else{
+                    this.finish();
                 }
        //         imageView.setImageBitmap(bitmap);
                 button2.setEnabled(true);

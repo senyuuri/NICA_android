@@ -54,7 +54,7 @@
 </FrameLayout>
 -->
 
-<LinearLayout
+<FrameLayout
 android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -64,20 +64,16 @@ style="@style/AppTheme">
 <ImageView
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:layout_gravity="center_horizontal|top"
-        android:layout_marginLeft="-1dp"/>
-<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:layout_width="fill_parent"
-                  android:layout_height="wrap_content">
+        android:layout_gravity="center_horizontal|top"/>
     <Button android:id="@id/main_photocancel"
             android:layout_margin="20dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/cancel"
             android:onClick="cancel"
-            android:layout_alignParentLeft="true"/>
+            android:layout_gravity="left|bottom"/>
 
     <Button android:id="@id/main_uploadbutton"
             android:layout_margin="20dp"
@@ -85,7 +81,5 @@ style="@style/AppTheme">
             android:layout_height="80dp"
             android:background="@drawable/upload"
             android:onClick="upload"
-            android:layout_alignParentRight="true"/>
-</RelativeLayout>
-
-</LinearLayout><!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_photoload_new.xml -->
+            android:layout_gravity="right|bottom"/>
+</FrameLayout><!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/main_photoload_new.xml -->

@@ -21,6 +21,8 @@ public class Constant {
     public static final String SERVER_INVITE = "http://metallica-nica.appspot.com/invite" ;
     public static final String SERVER_GET_IMAGE = "http://metallica-nica.appspot.com/getimage?imageid=";
     public static final String SERVER_INVITE_RESPONSE = "http://metallica-nica.appspot.com/inviteresponse" ;
+    public static final String SERVER_UPLOAD_GPS = "http://metallica-nica.appspot.com/uploadgps";
+    public static final String SERVER_GET_GPS = "http://metallica-nica.appspot.com/getgps";
 
     public static final String[] IMAGES = new String[] {
             // Heavy images

@@ -209,6 +209,7 @@ public class User_Login extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
+        try{Thread.sleep(2000);}catch (Exception e){Log.e(TAG,e.toString());};
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);
