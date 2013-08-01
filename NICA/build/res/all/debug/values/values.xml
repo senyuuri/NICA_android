@@ -36,7 +36,7 @@
     <string name="getphoto_button2">Take my profile photo</string>
     <string name="getphoto_button3">Take Photo</string>
     <string name="login_button">Retry</string>
-    <string name="login_content">Welcome</string>
+    <string name="login_content">Famlink</string>
     <string name="main_goto_geolocation">Geolocation</string>
     <string name="main_goto_imgupload">Photo Upload</string>
     <string name="main_goto_phonecall">Call</string>
