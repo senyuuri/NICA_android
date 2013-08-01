@@ -16,6 +16,7 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.NoActionBar">
         <item name="android:background">#ffa77b72</item>
+        <item name="android:textColor">#fffff9c6</item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 

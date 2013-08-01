@@ -11,4 +11,6 @@
     <string name="descr_image">descrimg</string><string name="getname_button">Next</string>
     <string name="login_content">Welcome</string>
     <string name="login_button">Retry</string><string name="main_goto_geolocation">Geolocation</string>
+    <string name="menu1">Change phone number</string>
+    <string name="menu2">Change avatar</string>
 </resources>

@@ -368,6 +368,10 @@ getphoto
                 </string>
                 <string name="main_goto_imgupload" >Photo Upload
                 </string>
+                <string name="menu2" >Change avatar
+                </string>
+                <string name="menu1" >Change phone number
+                </string>
                 <string name="main_goto_phonecall" >Call
                 </string>
                 <string name="app_name" >NICA
@@ -435,6 +439,9 @@ getphoto
                     <item name="android:background">
 #ffa77b72
                     </item>
+                    <item name="android:textColor">
+#fffff9c6
+                    </item>
                     <!-- All customizations that are NOT specific to a particular API-level can go here. -->
                 </style>
             </file>
@@ -488,6 +495,11 @@ true
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="info"
+                path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/layout/info.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/build/res/rs/debug" />
     </dataSet>

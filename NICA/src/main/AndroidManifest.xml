@@ -74,11 +74,18 @@
         <activity
                 android:name="com.dhs.nica.User_GetCircle"
                 android:label="User_GetCircle"></activity>
+        <activity
+                android:name="com.dhs.nica.Geolocation"
+                android:label="Geolocation"></activity>
+        <activity
+                android:name="com.dhs.nica.Main_Info"
+                android:label="Info"></activity>
+
 
         <meta-data
                 android:name="com.dhs.nica.v2.API_KEY"
                 android:value="AIzaSyATbrkdpa1fpgwfWcPjGyVHDwBgWeBLGSw" />
-        <uses-library android:name="com.google.android.maps" />
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
 
     </application>
 

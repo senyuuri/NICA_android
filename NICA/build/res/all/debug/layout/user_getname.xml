@@ -4,6 +4,26 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="80dp"
+            android:textSize="30sp"
+            android:text="First time using our app? "
+            android:layout_gravity="center_horizontal|top"/>
+
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="25sp"
+            android:text="Please enter your name. (Your family members will see this in their contact list )"
+            android:layout_gravity="center_horizontal|top"/>
 
     <EditText
             android:layout_width="fill_parent"

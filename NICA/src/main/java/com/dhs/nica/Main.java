@@ -161,6 +161,11 @@ public class Main extends BaseActivity {
     public void onBackPressed() {
     }
 
+    public void goto_info(View view){
+        Intent iinfo = new Intent(getApplicationContext(),Main_Info.class);
+        startActivity(iinfo);
+    }
+
     public void call(View view){
         Intent icall = new Intent(getApplicationContext(),Main_PhoneCall.class);
         icall.putExtra("user_info",circleinfo);
@@ -176,6 +181,12 @@ public class Main extends BaseActivity {
 
 
     public void goto_geolocation(View view){
+        try {
+            Class.forName("com.google.android.maps.MapActivity");
+        } catch (Exception e) {
+            Toast.makeText(this, "Oops! GoogleMapService is not available on your device. ERROR LACK OF GOOGLE ADD-ONS", Toast.LENGTH_SHORT).show();
+            return;
+        }
         Intent igeo = new Intent(getApplicationContext(),Geolocation.class);
         startActivity(igeo);
     }

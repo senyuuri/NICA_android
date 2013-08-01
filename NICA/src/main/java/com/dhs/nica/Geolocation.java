@@ -13,6 +13,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Message;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.TextView;
@@ -33,6 +34,7 @@ import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
@@ -45,16 +47,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.support.v4.app.FragmentActivity;
+
 
 /**
  * Created by natsuyuu on 13-7-31.
  */
-public class Geolocation extends Activity implements LocationListener {
+public class Geolocation extends FragmentActivity implements LocationListener {
 
     private LocationManager locationManager;
     private String provider;
     private GoogleMap map;
 
+    private String lineStr;
     private String lineStr2;
 
     static final String TAG = "dhs_nica";
@@ -149,6 +154,46 @@ public class Geolocation extends Activity implements LocationListener {
                 Toast.LENGTH_SHORT).show();
     }
 
+
+
+    private Runnable download_location = new Runnable() {
+        @Override
+        public void run() {
+
+            BufferedReader in = null;
+            try{
+                HttpClient client = new DefaultHttpClient();
+                String urlnew = (String) Constant.SERVER_GET_GPS+"?pn="+readFileData("pn");
+                Log.d(TAG, urlnew);
+                HttpGet request = new HttpGet(urlnew);
+                HttpResponse response = client.execute(request);
+                if(response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){
+                    HttpEntity resEntity = response.getEntity();
+                    lineStr = EntityUtils.toString(resEntity);
+                }
+                Log.d(TAG, "Circlrinfo fetched: " +lineStr);
+                Message msg = new Message();
+                msg.what = 1;
+                h.sendMessage(msg);
+
+
+
+            }catch (Exception e){Log.d(TAG,"Expection:"+ e.toString());
+            }
+            finally{
+                if (in != null) {
+                    try {
+                        in.close();
+                    } catch (IOException e) {
+                        Log.d(TAG,"Expection:"+ e.toString());
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+        }
+    };
+
     private Runnable upload_location = new Runnable() {
         @Override
         public void run() {
@@ -186,6 +231,25 @@ public class Geolocation extends Activity implements LocationListener {
             }
 
 
+        }
+    };
+
+    android.os.Handler h = new android.os.Handler(){
+        public void handleMessage (Message msg)
+        {
+            switch(msg.what)
+            {
+                //"y" Registered user
+                case 1:
+                    Intent intent = new Intent(getApplicationContext(), PreMain.class);
+                    startActivity(intent);
+                    Log.d(TAG, "LoginResult:"+"y");
+                    Toast toast = Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_LONG);
+                    toast.show();
+                    break;
+
+
+            }
         }
     };
 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_margin="20dp"
+            android:textSize="35sp"
+            android:text="How To Use?"
+            android:layout_gravity="center_horizontal|top"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:background="@drawable/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+        <TextView
+                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:textSize="22sp"
+                android:text="Press to wich between your photo stream and family contact"
+                />
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+        <Button
+                android:background="@drawable/camerab"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+        <TextView
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:textSize="22sp"
+                android:text="Take a picture and upload to share with your family!"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+        <Button
+                android:background="@drawable/refreshb"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+        <TextView
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:textSize="22sp"
+                android:text="Refresh the photo stream"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+        <Button
+                android:background="@drawable/locationb"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+        <TextView
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:textSize="22sp"
+                android:text="Show the location of your family members!"/>
+
+    </LinearLayout>
+
+</LinearLayout>

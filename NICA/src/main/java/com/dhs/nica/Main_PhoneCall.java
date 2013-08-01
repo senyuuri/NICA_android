@@ -40,7 +40,7 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 /**
  * Created by natsuyuu on 13-7-26.
  */
-public class Main_PhoneCall extends Activity{
+public class Main_PhoneCall extends BaseActivity{
     static final String TAG = "dhs_nica";
 //    private String JSONString;
     private ArrayList<HashMap<String,Object>> arraylist = new ArrayList<HashMap<String, Object>>();

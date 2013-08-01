@@ -42,6 +42,8 @@
     <string name="main_goto_phonecall">Call</string>
     <string name="main_photocancel">Cancel</string>
     <string name="main_uploadbutton">Upload</string>
+    <string name="menu1">Change phone number</string>
+    <string name="menu2">Change avatar</string>
     <!-- From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Holo.NoActionBar">
         <!--
@@ -53,6 +55,7 @@
 
     <style name="AppTheme" parent="android:Theme.Holo.NoActionBar">
         <item name="android:background">#ffa77b72</item>
+        <item name="android:textColor">#fffff9c6</item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 

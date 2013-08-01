@@ -40,9 +40,12 @@
         <activity android:label="PreMain" android:name="com.dhs.nica.PreMain"/>
         <activity android:label="User_GetName" android:name="com.dhs.nica.User_GetName"/>
         <activity android:label="User_GetCircle" android:name="com.dhs.nica.User_GetCircle"/>
+        <activity android:label="Geolocation" android:name="com.dhs.nica.Geolocation"/>
+        <activity android:label="Info" android:name="com.dhs.nica.Main_Info"/>
+
 
         <meta-data android:name="com.dhs.nica.v2.API_KEY" android:value="AIzaSyATbrkdpa1fpgwfWcPjGyVHDwBgWeBLGSw"/>
-        <uses-library android:name="com.google.android.maps"/>
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
 
     </application>
 

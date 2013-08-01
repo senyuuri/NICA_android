@@ -6,7 +6,16 @@
               android:layout_height="match_parent"
               android:onClick="onclick"
               style="@style/AppTheme">
-
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="30sp"
+            android:text="We did not manage to get your phone number :( Please enter it manually below."
+            android:layout_gravity="center_horizontal|top"/>
     <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

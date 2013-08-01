@@ -1,5 +1,6 @@
 package com.dhs.nica;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 /**
  * Created by natsuyuu on 13-7-31.
  */
-public class User_GetName extends BaseActivity{
+public class User_GetName extends Activity {
     static final String TAG = "dhs_nica";
 
 

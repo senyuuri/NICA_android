@@ -101,17 +101,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ac_image_pager=0x7f030001;
         public static final int activity_login=0x7f030002;
         public static final int geolocation=0x7f030003;
-        public static final int item_list_image=0x7f030004;
-        public static final int item_pager_image=0x7f030005;
-        public static final int main=0x7f030006;
-        public static final int main_phonecall=0x7f030007;
-        public static final int main_phonecall_relative=0x7f030008;
-        public static final int main_photoload_new=0x7f030009;
-        public static final int main_photoupload=0x7f03000a;
-        public static final int user_getcircle=0x7f03000b;
-        public static final int user_getname=0x7f03000c;
-        public static final int user_getphonenumber=0x7f03000d;
-        public static final int user_getphoto=0x7f03000e;
+        public static final int info=0x7f030004;
+        public static final int item_list_image=0x7f030005;
+        public static final int item_pager_image=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int main_phonecall=0x7f030008;
+        public static final int main_phonecall_relative=0x7f030009;
+        public static final int main_photoload_new=0x7f03000a;
+        public static final int main_photoupload=0x7f03000b;
+        public static final int user_getcircle=0x7f03000c;
+        public static final int user_getname=0x7f03000d;
+        public static final int user_getphonenumber=0x7f03000e;
+        public static final int user_getphoto=0x7f03000f;
     }
     public static final class string {
         /**  From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/strings.xml 
@@ -132,6 +133,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int main_goto_phonecall=0x7f06000d;
         public static final int main_photocancel=0x7f06000e;
         public static final int main_uploadbutton=0x7f06000f;
+        public static final int menu1=0x7f060010;
+        public static final int menu2=0x7f060011;
     }
     public static final class style {
         /**  From: file:/Users/natsuyuu/Documents/9597_Computing/NICAProject/NICA/src/main/res/values/styles.xml 

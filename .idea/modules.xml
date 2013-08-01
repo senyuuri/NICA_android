@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NICA/NICA.iml" filepath="$PROJECT_DIR$/NICA/NICA.iml" />
       <module fileurl="file://$PROJECT_DIR$/NICAProject.iml" filepath="$PROJECT_DIR$/NICAProject.iml" />
+      <module fileurl="file://$APPLICATION_HOME_DIR$/sdk/extras/google/google_play_services/libproject/google-play-services_lib/google-play-services_lib.iml" filepath="$APPLICATION_HOME_DIR$/sdk/extras/google/google_play_services/libproject/google-play-services_lib/google-play-services_lib.iml" />
     </modules>
   </component>
 </project>

@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * Created by natsuyuu on 13-7-28.
  */
-public class Main_PhotoUpload_new extends Activity{
+public class Main_PhotoUpload_new extends BaseActivity{
     private static final int REQUEST_CODE = 1;
     private Bitmap bitmap;
     private ImageView imageView;

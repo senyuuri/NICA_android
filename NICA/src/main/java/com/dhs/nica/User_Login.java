@@ -56,7 +56,7 @@ import com.nostra13.universalimageloader.utils.StorageUtils;
  *
  * @see SystemUiHider
  */
-public class User_Login extends BaseActivity {
+public class User_Login extends Activity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -124,6 +124,8 @@ public class User_Login extends BaseActivity {
                     Intent intent2 = new Intent(getApplicationContext(), User_GetName.class);
                     intent2.putExtra("pn",phoneNumber);
                     startActivity(intent2);
+                    Toast toast2 = Toast.makeText(getApplicationContext(),"Welcome, new user:)",Toast.LENGTH_LONG);
+                    toast2.show();
                     break;
 
 
@@ -132,6 +134,8 @@ public class User_Login extends BaseActivity {
                 case 3:
                     //do something here to show error
                     Log.e(TAG,"Handler: Invalid return content");
+                    Toast toast3 = Toast.makeText(getApplicationContext(),"Network not available. Please check your 3G/wifi connection:(",Toast.LENGTH_LONG);
+                    toast3.show();
                     break;
 
 
@@ -186,7 +190,7 @@ public class User_Login extends BaseActivity {
 
             }catch (Exception e){Log.d(TAG,"Expection:"+ e.toString());
                 msg = h.obtainMessage();
-                msg.what = 5;
+                msg.what = 3;
                 h.sendMessage(msg);}
             finally{
                 if (in != null) {
@@ -196,7 +200,7 @@ public class User_Login extends BaseActivity {
                         Log.d(TAG,"Expection:"+ e.toString());
                         e.printStackTrace();
                         msg = h.obtainMessage();
-                        msg.what = 5;
+                        msg.what = 3;
                         h.sendMessage(msg);}
                 }
             }

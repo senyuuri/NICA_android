@@ -10,8 +10,7 @@
           android:id="@android:id/list"
           android:layout_width="fill_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="120dp"
-          android:layout_marginLeft="20dp"/>
+          android:layout_marginTop="120dp"/>
     <Button
             android:id="@+id/divider"
             android:background="@drawable/devider"
